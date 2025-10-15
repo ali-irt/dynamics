@@ -1,0 +1,940 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Revona Dynamics Support — Enterprise Microsoft Dynamics 365 Services</title>
+  <meta name="description" content="Enterprise-grade Microsoft Dynamics 365 support, implementation, integrations, training, and managed services. Trusted by mid-market and enterprise customers." />
+  <meta name="keywords" content="Microsoft Dynamics 365, Dynamics Support, Enterprise ERP, Business Central, Finance Operations, Dynamics Implementation" />
+  <meta name="author" content="Revona Dynamics Support" />
+  <meta name="theme-color" content="#4a90e2">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Revona Dynamics Support — Enterprise Microsoft Dynamics 365 Services" />
+  <meta property="og:description" content="Enterprise-grade Microsoft Dynamics 365 support, implementation, and managed services." />
+  <meta property="og:site_name" content="Revona Dynamics Support" />
+  
+  <!-- Preload critical fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+   <style>
+    :root {
+      /* Dark Theme: Light on Dark */
+      --bg-primary: #0d1117;
+      --bg-secondary: #161b22;
+      --bg-card: #21262d;
+      --text-primary: #f0f6fc;
+      --text-secondary: #8b949e;
+      --text-muted: #6e7681;
+      --accent-blue: #58a6ff;
+      --accent-green: #7ee787;
+      --accent-purple: #bc8cff;
+      --accent-orange: #ffa657;
+      --accent-red: #f85149;
+      --border-color: #30363d;
+      --gradient-soft: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+      --shadow-light: 0 1px 3px rgba(0,0,0,0.5);
+      --shadow-card: 0 4px 12px rgba(0,0,0,0.3);
+      --border-radius: 8px;
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .site {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .logo-mark {
+      width: 40px;
+      height: 40px;
+      background: var(--accent-blue);
+      color: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 12px;
+      font-size: 24px;
+    }
+
+    .brand-text h1 {
+      font-size: 1.25rem;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .brand-text p {
+      font-size: 0.875rem;
+      margin: 0;
+      color: var(--text-secondary);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-primary);
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-weight: 500;
+      padding: 0.5rem 0;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--text-primary);
+    }
+
+    nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--accent-blue);
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .page-header {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .page-header p {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--bg-card);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border-color);
+      margin-bottom: 2rem;
+    }
+
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .solution-card {
+      background: var(--bg-card);
+      border-radius: var(--border-radius);
+      border: 1px solid var(--border-color);
+      padding: 2rem;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .solution-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      border-color: var(--accent-blue);
+    }
+
+    .solution-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .icon-finance {
+      background: rgba(88, 166, 255, 0.15);
+      color: var(--accent-blue);
+    }
+
+    .icon-warehouse {
+      background: rgba(126, 231, 135, 0.15);
+      color: var(--accent-green);
+    }
+
+    .icon-service {
+      background: rgba(188, 140, 255, 0.15);
+      color: var(--accent-purple);
+    }
+
+    .icon-sales {
+      background: rgba(255, 166, 87, 0.15);
+      color: var(--accent-orange);
+    }
+
+    .icon-ai {
+      background: rgba(248, 81, 73, 0.15);
+      color: var(--accent-red);
+    }
+
+    .solution-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .solution-card p {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .solution-features {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    .solution-features li {
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      color: var(--text-secondary);
+    }
+
+    .solution-features li:before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--accent-green);
+      font-weight: bold;
+    }
+
+    .solution-cta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--accent-blue);
+      color: white;
+      border: none;
+      border-radius: var(--border-radius);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #4098fc;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+    }
+
+    .btn-outline:hover {
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      border-color: var(--accent-blue);
+    }
+
+    .implementation-time {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+    }
+
+    .implementation-time:before {
+      content: '⏱️';
+      margin-right: 0.5rem;
+    }
+
+    .benefits-section {
+      margin-top: 4rem;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .benefit-item {
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .benefit-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .benefit-item h3 {
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .benefit-item p {
+      color: var(--text-secondary);
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: var(--bg-card);
+      border-radius: var(--border-radius);
+      margin-top: 4rem;
+      border: 1px solid var(--border-color);
+    }
+
+    .cta-section h2 {
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .cta-section p {
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .btn-large {
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: var(--bg-secondary);
+      color: var(--text-primary);
+      border-top: 1px solid var(--border-color);
+      margin-top: 4rem;
+    }
+
+    footer p {
+      margin-bottom: 1rem;
+    }
+
+    footer a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      margin: 0 0.75rem;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      header {
+        padding: 1rem;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-secondary);
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        border-top: 1px solid var(--border-color);
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      main {
+        padding: 1rem;
+      }
+
+      .page-header h1 {
+        font-size: 2rem;
+      }
+
+      .solutions-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .solution-cta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Animation for cards */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .solution-card {
+      animation: fadeInUp 0.5s ease forwards;
+    }
+
+    .solution-card:nth-child(1) { animation-delay: 0.1s; }
+    .solution-card:nth-child(2) { animation-delay: 0.2s; }
+    .solution-card:nth-child(3) { animation-delay: 0.3s; }
+    .solution-card:nth-child(4) { animation-delay: 0.4s; }
+    .solution-card:nth-child(5) { animation-delay: 0.5s; }
+  </style>
+</head>
+<body>
+   <div class="site">
+    <header>
+      <a href="index.html" class="brand">
+        <div class="logo-mark">R</div>
+        <div class="brand-text">
+          <h1>Revona Dynamics</h1>
+          <p>Enterprise Microsoft Dynamics 365</p>
+        </div>
+      </a>
+      <button class="mobile-menu-btn" id="mobile-menu-toggle">☰</button>
+      <nav id="main-nav">
+        <a class="active" href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="solutions.html" >Solutions</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HOME -->
+    <main id="main-content" data-page="home" class="open">
+      <section class="hero">
+        <div class="hero-content animate-in">
+          <h2>Enterprise-grade support for Microsoft Dynamics 365</h2>
+          <p class="lead">Trusted by mid-market and enterprise customers to deliver fast incident resolution, robust implementations, secure integrations, and user adoption programs.</p>
+
+          <div class="cta">
+            <button class="btn primary" id="contact-cta" aria-label="Request a consultation">Request Consultation</button>
+            <button class="btn ghost" id="services-cta" aria-label="Explore our services">Explore Services</button>
+          </div>
+
+          <div class="trust" role="list" aria-label="Trust indicators">
+            <div class="badge" role="listitem">ISO 27001-ready</div>
+            <div class="badge" role="listitem">Enterprise SLAs</div>
+            <div class="badge" role="listitem">Certified Consultants</div>
+            <div class="badge" role="listitem">Global Support</div>
+          </div>
+        </div>
+
+        <aside class="card hero-decoration animate-in animate-delay-2" aria-labelledby="contact-form-title">
+          <h2 id="contact-form-title">Contact Our Team</h2>
+          <p style="margin-bottom: 20px">Our Enterprise Success Manager will reach out within one business day.</p>
+          <form id="lead-form" novalidate>
+            <div>
+              <label for="lead-company">Company Name <span aria-hidden="true">*</span></label>
+              <input id="lead-company" name="company" required placeholder="Your company" aria-required="true" />
+            </div>
+            <div>
+              <label for="lead-name">Your Name <span aria-hidden="true">*</span></label>
+              <input id="lead-name" name="name" required placeholder="Full name" aria-required="true" />
+            </div>
+            <div>
+              <label for="lead-email">Email Address <span aria-hidden="true">*</span></label>
+              <input id="lead-email" name="email" required type="email" placeholder="you@company.com" aria-required="true" />
+            </div>
+            <div>
+              <label for="lead-interest">Primary Interest</label>
+              <select id="lead-interest" name="interest">
+                <option value="managed-support">Managed Support</option>
+                <option value="implementation">Implementation</option>
+                <option value="integrations">Integrations</option>
+                <option value="training">Training</option>
+                <option value="licensing">Licensing & Audit</option>
+              </select>
+            </div>
+            <button class="btn primary" type="submit">Request Consultation</button>
+            <div id="lead-result" role="status" aria-live="polite"></div>
+          </form>
+        </aside>
+      </section>
+
+      <!-- Extended: Stats Section -->
+      <section class="stats">
+        <div class="stat animate-in">
+          <div class="stat-number">500+</div>
+          <p>Successful Implementations</p>
+        </div>
+        <div class="stat animate-in animate-delay-1">
+          <div class="stat-number">150+</div>
+          <p>Enterprise Clients</p>
+        </div>
+        <div class="stat animate-in animate-delay-2">
+          <div class="stat-number">24/7</div>
+          <p>Global Support Coverage</p>
+        </div>
+        <div class="stat animate-in animate-delay-3">
+          <div class="stat-number">42%</div>
+          <p>Avg. Efficiency Gain</p>
+        </div>
+      </section>
+
+      <!-- Extended: Testimonials Section -->
+      <section class="testimonials" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <h2 style="text-align: center; margin-bottom: 3rem;">What Our Clients Say</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+          <div class="card animate-in">
+            <p>"Revona's managed support transformed our Dynamics environment. Response times dropped by 70%, and our team feels empowered."</p>
+            <p style="margin-top: 1rem; font-weight: 600; color: var(--accent-blue);">— Jane Doe, CFO, GlobalTech Inc.</p>
+          </div>
+          <div class="card animate-in animate-delay-1">
+            <p>"The integration expertise saved us months in our ERP migration. Highly recommend for enterprise-scale projects."</p>
+            <p style="margin-top: 1rem; font-weight: 600; color: var(--accent-blue);">— John Smith, IT Director, SupplyChain Corp.</p>
+          </div>
+          <div class="card animate-in animate-delay-2">
+            <p>"Custom training programs boosted our user adoption to 95%. True partners in our digital transformation."</p>
+            <p style="margin-top: 1rem; font-weight: 600; color: var(--accent-blue);">— Maria Garcia, Operations Lead, RetailMax.</p>
+          </div>
+          <!-- New Testimonial -->
+          <div class="card animate-in animate-delay-3">
+            <p>"Revona's accelerators for the 2025 wave 2 release helped us deploy AI agents seamlessly, enhancing our Copilot capabilities."</p>
+            <p style="margin-top: 1rem; font-weight: 600; color: var(--accent-blue);">— David Lee, VP IT, FinServe Global.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="why-section animate-in animate-delay-3">
+        <h2>Why Enterprise Customers Choose Revona</h2>
+        <ul>
+          <li><strong>Proactive SLAs</strong> — Dedicated SLAs, escalation paths and enterprise on-call rotations.</li>
+          <li><strong>Deep Dynamics Expertise</strong> — Experienced consultants across Business Central, F&O, Sales & Service apps.</li>
+          <li><strong>Secure Integrations</strong> — Best-practice middleware, API governance and identity management.</li>
+          <li><strong>Train & Onboard</strong> — Scalable user training and role-based learning programs.</li>
+          <!-- Extended: Additional Why -->
+          <li><strong>Wave Release Expertise</strong> — Specialized support for Dynamics 365 2025 release wave 2, including AI agents and Copilot enhancements.</li>
+        </ul>
+      </section>
+
+      <section class="services" aria-label="Our primary services">
+        <article class="service card animate-in">
+          <h3>Managed Support</h3>
+          <p>24/7 incident handling, SLA-backed resolution times, dedicated success manager and monthly reviews.</p>
+        </article>
+        <article class="service card animate-in animate-delay-1">
+          <h3>Implementation & Upgrades</h3>
+          <p>Full lifecycle implementation: discovery, fit-gap, configuration, testing, and cutover for D365 modules.</p>
+        </article>
+        <article class="service card animate-in animate-delay-2">
+          <h3>Integrations & APIs</h3>
+          <p>Secure middleware design, data mapping, Power Platform and third-party connector expertise.</p>
+        </article>
+        <article class="service card animate-in animate-delay-3">
+          <h3>Custom Development</h3>
+          <p>Extensions, plugins and automation to tailor Dynamics to your business processes.</p>
+        </article>
+        <article class="service card animate-in">
+          <h3>User Training & Adoption</h3>
+          <p>Role-based training, workshops, LMS integration and change management to boost ROI.</p>
+        </article>
+        <article class="service card animate-in animate-delay-1">
+          <h3>Licensing & Audit</h3>
+          <p>License optimization, compliance reviews and support for audits and licensing negotiations.</p>
+        </article>
+      </section>
+
+      <section class="two">
+        <article class="card">
+          <h2>Featured Case Study</h2>
+          <h3 style="margin-top: 16px">Global Distributor — Finance & Operations Migration</h3>
+          <p style="color: var(--text-muted); font-size: 14px; margin: 8px 0">12-month engagement • 3 regions • Lift & shift + rework</p>
+          <p style="margin-top: 16px">Revona led a phased migration from legacy ERP to Dynamics 365 Finance and Operations, reducing month-end close time by 42% and improving supply chain visibility.</p>
+          <!-- Extended: More details -->
+          <p style="margin-top: 1rem; color: var(--text-secondary);">Key outcomes: Automated reporting dashboards, integrated with Azure Synapse for real-time analytics, and custom workflows for multi-entity compliance. Post-migration, we implemented 2025 wave 1 updates for enhanced financial reporting.</p>
+          <button class="btn ghost" style="margin-top: 20px" id="view-more-case">Read Full Case Study</button>
+        </article>
+
+        <aside class="card">
+          <h3>Security & Compliance</h3>
+          <p>We follow enterprise security practices: role-based access, Azure AD integration, encryption in transit and at rest, and support for SOC/ISO controls.</p>
+          <!-- Extended: Additional compliance info -->
+          <p style="margin-top: 1rem; color: var(--text-secondary);">GDPR-ready data handling, regular penetration testing, and compliance audits included in all managed services. Aligned with 2025 release wave 2 for improved data governance features.</p>
+        </aside>
+      </section>
+
+      <!-- Extended: Blog Preview Section with Updated Content -->
+      <section style="background: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Latest Insights</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+          <div class="card animate-in">
+            <h3>Dynamics 365 2025 Release Wave 2: Key Features for Enterprises</h3>
+            <p style="color: var(--text-muted); margin: 8px 0 1rem 0;">October 2025</p>
+            <p>Discover the latest in AI-driven agents, enhanced Copilot for financial reporting, and improved supply chain modules in the 2025 release wave 2, rolling out from October 2025 through March 2026.<grok-card data-id="46b1fd" data-type="citation_card"></grok-card><grok-card data-id="72b05a" data-type="citation_card"></grok-card></p>
+            <button class="btn ghost" style="margin-top: 1rem;">Read More</button>
+          </div>
+          <div class="card animate-in animate-delay-1">
+            <h3>Power Platform Wave 2: Integrating AI Agents with Dynamics</h3>
+            <p style="color: var(--text-muted); margin: 8px 0 1rem 0;">October 2025</p>
+            <p>Explore smarter AI agents and Copilot enhancements in Power Platform 2025 release wave 2, perfect for seamless Dynamics integrations.<grok-card data-id="02b1df" data-type="citation_card"></grok-card><grok-card data-id="a0bb76" data-type="citation_card"></grok-card></p>
+            <button class="btn ghost" style="margin-top: 1rem;">Read More</button>
+          </div>
+          <div class="card animate-in animate-delay-2">
+            <h3>Business Central October 2025 Cumulative Updates</h3>
+            <p style="color: var(--text-muted); margin: 8px 0 1rem 0;">October 2025</p>
+            <p>Highlights from the October 2025 updates for Dynamics 365 Business Central, including enhanced financial reporting and AI capabilities.<grok-card data-id="54ebb1" data-type="citation_card"></grok-card><grok-card data-id="97d70a" data-type="citation_card"></grok-card></p>
+            <button class="btn ghost" style="margin-top: 1rem;">Read More</button>
+          </div>
+          <!-- New Blog Post -->
+          <div class="card animate-in animate-delay-3">
+            <h3>Dynamics GP October 2025 Release: Customer-Driven Enhancements</h3>
+            <p style="color: var(--text-muted); margin: 8px 0 1rem 0;">October 2025</p>
+            <p>Small but impactful updates from customer suggestions in the Dynamics GP October 2025 release, focusing on usability and efficiency.<grok-card data-id="9fe74b" data-type="citation_card"></grok-card></p>
+            <button class="btn ghost" style="margin-top: 1rem;">Read More</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- New: FAQ Section on Home -->
+      <section class="faq-section" style="padding: 4rem 2rem; max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Frequently Asked Questions</h2>
+        <div class="faq">
+          <div class="faq-item animate-in">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>How do you support the latest Dynamics 365 updates?</span>
+              <span style="color: var(--accent-blue);">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>We provide proactive advisory on release waves, including the 2025 wave 2 with AI agents and Copilot improvements, ensuring seamless upgrades.<grok-card data-id="221b45" data-type="citation_card"></grok-card></p>
+            </div>
+          </div>
+          <div class="faq-item animate-in animate-delay-1">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>What SLAs do you offer for managed support?</span>
+              <span style="color: var(--accent-blue);">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Tiered SLAs with P1 resolution under 4 hours, 24/7 coverage, and follow-the-sun support across regions.</p>
+            </div>
+          </div>
+          <div class="faq-item animate-in animate-delay-2">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Can you help with Business Central on-premises updates?</span>
+              <span style="color: var(--accent-blue);">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, we specialize in cumulative updates like the October 2025 release for Business Central 2025 wave 1.<grok-card data-id="818ea3" data-type="citation_card"></grok-card></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <footer role="contentinfo">
+      <p>© <span id="year"></span> Revona Dynamics Support. All rights reserved.</p>
+      <p style="margin-top: 8px; font-size: 14px">
+        <a href="#/contact" style="color: var(--text-muted); text-decoration: none; margin: 0 12px">Contact</a>
+        <a href="#/privacy" style="color: var(--text-muted); text-decoration: none; margin: 0 12px">Privacy Policy</a>
+        <a href="#/terms" style="color: var(--text-muted); text-decoration: none; margin: 0 12px">Terms of Service</a>
+      </p>
+    </footer>
+  </div>
+  <script>
+    function toggleFaq(element) {
+      const answer = element.nextElementSibling;
+      const icon = element.querySelector('span:last-child');
+      answer.classList.toggle('open');
+      icon.textContent = answer.classList.contains('open') ? '−' : '+';
+    }
+
+    // Form handling function
+    function handleFormSubmit(formId, resultId, storageKey) {
+      const $form = $(`#${formId}`);
+      if (!$form.length) return;
+      
+      $form.on('submit', function(e) {
+        e.preventDefault();
+        
+        // Basic validation
+        if (!$form[0].checkValidity()) {
+          $form[0].reportValidity();
+          return;
+        }
+        
+        const formData = new FormData(this);
+        const data = {};
+        
+        formData.forEach((value, key) => {
+          data[key] = value.trim();
+        });
+        
+        // Show loading state
+        const $submitBtn = $form.find('button[type="submit"]');
+        const originalText = $submitBtn.text();
+        $submitBtn.prop('disabled', true).text('Sending...');
+        
+        // Simulate API call
+        setTimeout(() => {
+          try {
+            // Store data
+            data.timestamp = new Date().toISOString();
+            const stored = JSON.parse(localStorage.getItem(storageKey) || '[]');
+            stored.push(data);
+            localStorage.setItem(storageKey, JSON.stringify(stored));
+            
+            // Show success
+            $(`#${resultId}`).text('Thank you! Your request has been received.').addClass('success').show();
+            $form[0].reset();
+          } catch (error) {
+            console.error('Form submission error:', error);
+            $(`#${resultId}`).text('An error occurred. Please try again.').addClass('error').show();
+          } finally {
+            $submitBtn.prop('disabled', false).text(originalText);
+          }
+        }, 1000);
+      });
+    }
+
+    (function($) {
+      'use strict';
+      
+      // Clean URLs - Remove .html extension if present and update navigation
+      function initializeCleanUrls() {
+        // Remove .html from current URL if present
+        if (window.location.pathname.endsWith('.html')) {
+          const cleanUrl = window.location.pathname.replace('.html', '');
+          window.history.replaceState(null, null, cleanUrl);
+        }
+        
+        // Update active navigation
+        updateActiveNav();
+        
+        // Update all internal links to use clean URLs
+        updateInternalLinks();
+      }
+      
+      // Update active navigation based on current URL
+      function updateActiveNav() {
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('nav a');
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          const linkHref = link.getAttribute('href');
+          
+          // Handle different link formats
+          if (linkHref === '/' && currentPath === '/') {
+            link.classList.add('active');
+          } else if (linkHref !== '/' && currentPath.includes(linkHref)) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
+      // Update internal links to use clean URLs
+      function updateInternalLinks() {
+        // Update CTA buttons
+        $('#contact-cta').on('click', function() {
+          window.location.href = 'contact';
+        });
+        
+        $('#services-cta').on('click', function() {
+          window.location.href = 'services';
+        });
+      }
+      
+      // State management
+      const state = {
+        currentPage: 'home',
+        formSubmitting: false
+      };
+      
+      // DOM elements
+      const $mobileMenuBtn = $('#mobile-menu-toggle');
+      const $mainNav = $('#main-nav');
+      
+      // Utility functions
+      function sanitizeInput(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+      }
+      
+      function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+      }
+      
+      function showMessage(elementId, message, isError = false) {
+        const $element = $(`#${elementId}`);
+        if (!$element.length) return;
+        
+        $element.text(message)
+          .removeClass('result-message error success')
+          .addClass(isError ? 'result-message error' : 'result-message success')
+          .attr('role', 'status')
+          .show();
+        
+        // Clear message after 5 seconds with animation
+        setTimeout(() => {
+          $element.fadeOut(300, function() {
+            $(this).text('').removeClass('result-message error success');
+          });
+        }, 5000);
+      }
+      
+      // jQuery Animations: Scroll-triggered animations
+      function animateOnScroll() {
+        $('.animate-in').each(function() {
+          const $this = $(this);
+          if ($this.is(':visible') && !$this.hasClass('animate-visible')) {
+            const delay = $this.data('delay') || 0;
+            setTimeout(() => {
+              $this.addClass('animate-visible').fadeIn(600).css('transform', 'translateY(0)');
+            }, delay * 100);
+          }
+        });
+      }
+      
+      // Initialize everything when document is ready
+      $(document).ready(function() {
+        // Set current year
+        $('#year').text(new Date().getFullYear());
+        
+        // Initialize clean URLs
+        initializeCleanUrls();
+        
+        // Initialize animations
+        animateOnScroll();
+        $(window).on('scroll', animateOnScroll);
+        
+        // Mobile menu toggle
+        $mobileMenuBtn.on('click', function() {
+          $mainNav.slideToggle(300).toggleClass('open');
+          $(this).attr('aria-expanded', $mainNav.hasClass('open'));
+        });
+        
+        // Initialize forms
+        handleFormSubmit('lead-form', 'lead-result', 'revona_leads_v2');
+        
+        // Case study button
+        $('#view-more-case').on('click', function() {
+          alert('Full case study details coming soon! Contact us for more information about this project.');
+        });
+        
+        // Hover animations for cards
+        $('.card, .service').hover(
+          function() {
+            $(this).stop().animate({ boxShadow: '0 8px 24px rgba(0,0,0,0.4)' }, 200);
+          },
+          function() {
+            $(this).stop().animate({ boxShadow: '0 4px 12px rgba(0,0,0,0.3)' }, 200);
+          }
+        );
+        
+        // Prevent form resubmission on page refresh
+        if (window.history.replaceState) {
+          window.history.replaceState(null, null, window.location.href);
+        }
+      });
+      
+    })(jQuery);
+  </script>
+
+</body>
+</html>
