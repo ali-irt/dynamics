@@ -4,7 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  
+  <!-- Favicon -->
+<link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<meta name="theme-color" content="#0d1117">
+
   <title>Revona Dynamics Support — Enterprise Microsoft Dynamics 365 Services</title>
   <meta name="description" content="Enterprise-grade Microsoft Dynamics 365 support, implementation, integrations, training, and managed services. Trusted by mid-market and enterprise customers." />
   <meta name="keywords" content="Microsoft Dynamics 365, Dynamics Support, Enterprise ERP, Business Central, Finance Operations, Dynamics Implementation" />
@@ -24,7 +28,7 @@
   
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style.css" />
    <style>
     :root {
       /* Dark Theme: Light on Dark */
@@ -481,19 +485,25 @@
     .solution-card:nth-child(3) { animation-delay: 0.3s; }
     .solution-card:nth-child(4) { animation-delay: 0.4s; }
     .solution-card:nth-child(5) { animation-delay: 0.5s; }
+
+    .animate-in {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
   </style>
 </head>
 <body>
    <div class="site">
     <header>
-      <a href="index.html" class="brand">
-        <div class="logo-mark">R</div>
-        <div class="brand-text">
-          <h1>Revona Dynamics</h1>
-          <p>Enterprise Microsoft Dynamics 365</p>
-        </div>
-      </a>
-      <button class="mobile-menu-btn" id="mobile-menu-toggle">☰</button>
+  <a href="index.html" class="brand">
+    <img src="assets/dynamics-live-logo.png" alt="Dynamics Live logo" class="logo">
+    <div class="brand-text">
+      <h1>Dynamics Live</h1>
+      <p>Innovation in Motion</p>
+    </div>
+  </a>
+ <button class="mobile-menu-btn" id="mobile-menu-toggle">☰</button>
       <nav id="main-nav">
         <a class="active" href="index.html">Home</a>
         <a href="services.html">Services</a>
@@ -501,7 +511,8 @@
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
-    </header>
+</header>
+
 
     <!-- HOME -->
     <main id="main-content" data-page="home" class="open">
@@ -689,39 +700,7 @@
         </div>
       </section>
 
-      <!-- New: FAQ Section on Home -->
-      <section class="faq-section" style="padding: 4rem 2rem; max-width: 1200px; margin: 0 auto;">
-        <h2 style="text-align: center; margin-bottom: 2rem;">Frequently Asked Questions</h2>
-        <div class="faq">
-          <div class="faq-item animate-in">
-            <div class="faq-question" onclick="toggleFaq(this)">
-              <span>How do you support the latest Dynamics 365 updates?</span>
-              <span style="color: var(--accent-blue);">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>We provide proactive advisory on release waves, including the 2025 wave 2 with AI agents and Copilot improvements, ensuring seamless upgrades.<grok-card data-id="221b45" data-type="citation_card"></grok-card></p>
-            </div>
-          </div>
-          <div class="faq-item animate-in animate-delay-1">
-            <div class="faq-question" onclick="toggleFaq(this)">
-              <span>What SLAs do you offer for managed support?</span>
-              <span style="color: var(--accent-blue);">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>Tiered SLAs with P1 resolution under 4 hours, 24/7 coverage, and follow-the-sun support across regions.</p>
-            </div>
-          </div>
-          <div class="faq-item animate-in animate-delay-2">
-            <div class="faq-question" onclick="toggleFaq(this)">
-              <span>Can you help with Business Central on-premises updates?</span>
-              <span style="color: var(--accent-blue);">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>Yes, we specialize in cumulative updates like the October 2025 release for Business Central 2025 wave 1.<grok-card data-id="818ea3" data-type="citation_card"></grok-card></p>
-            </div>
-          </div>
-        </div>
-      </section>
+    
     </main>
 
 
@@ -734,207 +713,6 @@
       </p>
     </footer>
   </div>
-  <script>
-    function toggleFaq(element) {
-      const answer = element.nextElementSibling;
-      const icon = element.querySelector('span:last-child');
-      answer.classList.toggle('open');
-      icon.textContent = answer.classList.contains('open') ? '−' : '+';
-    }
-
-    // Form handling function
-    function handleFormSubmit(formId, resultId, storageKey) {
-      const $form = $(`#${formId}`);
-      if (!$form.length) return;
-      
-      $form.on('submit', function(e) {
-        e.preventDefault();
-        
-        // Basic validation
-        if (!$form[0].checkValidity()) {
-          $form[0].reportValidity();
-          return;
-        }
-        
-        const formData = new FormData(this);
-        const data = {};
-        
-        formData.forEach((value, key) => {
-          data[key] = value.trim();
-        });
-        
-        // Show loading state
-        const $submitBtn = $form.find('button[type="submit"]');
-        const originalText = $submitBtn.text();
-        $submitBtn.prop('disabled', true).text('Sending...');
-        
-        // Simulate API call
-        setTimeout(() => {
-          try {
-            // Store data
-            data.timestamp = new Date().toISOString();
-            const stored = JSON.parse(localStorage.getItem(storageKey) || '[]');
-            stored.push(data);
-            localStorage.setItem(storageKey, JSON.stringify(stored));
-            
-            // Show success
-            $(`#${resultId}`).text('Thank you! Your request has been received.').addClass('success').show();
-            $form[0].reset();
-          } catch (error) {
-            console.error('Form submission error:', error);
-            $(`#${resultId}`).text('An error occurred. Please try again.').addClass('error').show();
-          } finally {
-            $submitBtn.prop('disabled', false).text(originalText);
-          }
-        }, 1000);
-      });
-    }
-
-    (function($) {
-      'use strict';
-      
-      // Clean URLs - Remove .html extension if present and update navigation
-      function initializeCleanUrls() {
-        // Remove .html from current URL if present
-        if (window.location.pathname.endsWith('.html')) {
-          const cleanUrl = window.location.pathname.replace('.html', '');
-          window.history.replaceState(null, null, cleanUrl);
-        }
-        
-        // Update active navigation
-        updateActiveNav();
-        
-        // Update all internal links to use clean URLs
-        updateInternalLinks();
-      }
-      
-      // Update active navigation based on current URL
-      function updateActiveNav() {
-        const currentPath = window.location.pathname;
-        const navLinks = document.querySelectorAll('nav a');
-        
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          const linkHref = link.getAttribute('href');
-          
-          // Handle different link formats
-          if (linkHref === '/' && currentPath === '/') {
-            link.classList.add('active');
-          } else if (linkHref !== '/' && currentPath.includes(linkHref)) {
-            link.classList.add('active');
-          }
-        });
-      }
-      
-      // Update internal links to use clean URLs
-      function updateInternalLinks() {
-        // Update CTA buttons
-        $('#contact-cta').on('click', function() {
-          window.location.href = 'contact';
-        });
-        
-        $('#services-cta').on('click', function() {
-          window.location.href = 'services';
-        });
-      }
-      
-      // State management
-      const state = {
-        currentPage: 'home',
-        formSubmitting: false
-      };
-      
-      // DOM elements
-      const $mobileMenuBtn = $('#mobile-menu-toggle');
-      const $mainNav = $('#main-nav');
-      
-      // Utility functions
-      function sanitizeInput(str) {
-        const div = document.createElement('div');
-        div.textContent = str;
-        return div.innerHTML;
-      }
-      
-      function validateEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-      }
-      
-      function showMessage(elementId, message, isError = false) {
-        const $element = $(`#${elementId}`);
-        if (!$element.length) return;
-        
-        $element.text(message)
-          .removeClass('result-message error success')
-          .addClass(isError ? 'result-message error' : 'result-message success')
-          .attr('role', 'status')
-          .show();
-        
-        // Clear message after 5 seconds with animation
-        setTimeout(() => {
-          $element.fadeOut(300, function() {
-            $(this).text('').removeClass('result-message error success');
-          });
-        }, 5000);
-      }
-      
-      // jQuery Animations: Scroll-triggered animations
-      function animateOnScroll() {
-        $('.animate-in').each(function() {
-          const $this = $(this);
-          if ($this.is(':visible') && !$this.hasClass('animate-visible')) {
-            const delay = $this.data('delay') || 0;
-            setTimeout(() => {
-              $this.addClass('animate-visible').fadeIn(600).css('transform', 'translateY(0)');
-            }, delay * 100);
-          }
-        });
-      }
-      
-      // Initialize everything when document is ready
-      $(document).ready(function() {
-        // Set current year
-        $('#year').text(new Date().getFullYear());
-        
-        // Initialize clean URLs
-        initializeCleanUrls();
-        
-        // Initialize animations
-        animateOnScroll();
-        $(window).on('scroll', animateOnScroll);
-        
-        // Mobile menu toggle
-        $mobileMenuBtn.on('click', function() {
-          $mainNav.slideToggle(300).toggleClass('open');
-          $(this).attr('aria-expanded', $mainNav.hasClass('open'));
-        });
-        
-        // Initialize forms
-        handleFormSubmit('lead-form', 'lead-result', 'revona_leads_v2');
-        
-        // Case study button
-        $('#view-more-case').on('click', function() {
-          alert('Full case study details coming soon! Contact us for more information about this project.');
-        });
-        
-        // Hover animations for cards
-        $('.card, .service').hover(
-          function() {
-            $(this).stop().animate({ boxShadow: '0 8px 24px rgba(0,0,0,0.4)' }, 200);
-          },
-          function() {
-            $(this).stop().animate({ boxShadow: '0 4px 12px rgba(0,0,0,0.3)' }, 200);
-          }
-        );
-        
-        // Prevent form resubmission on page refresh
-        if (window.history.replaceState) {
-          window.history.replaceState(null, null, window.location.href);
-        }
-      });
-      
-    })(jQuery);
-  </script>
 
 </body>
 </html>

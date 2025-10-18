@@ -5,15 +5,20 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Revona Dynamics Support — Enterprise Microsoft Dynamics 365 Services</title>
+  <title>Revona Dynamics Support – Enterprise Microsoft Dynamics 365 Services</title>
   <meta name="description" content="Enterprise-grade Microsoft Dynamics 365 support, implementation, integrations, training, and managed services. Trusted by mid-market and enterprise customers." />
   <meta name="keywords" content="Microsoft Dynamics 365, Dynamics Support, Enterprise ERP, Business Central, Finance Operations, Dynamics Implementation" />
   <meta name="author" content="Revona Dynamics Support" />
   <meta name="theme-color" content="#4a90e2">
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <meta name="theme-color" content="#0d1117">
+
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Revona Dynamics Support — Enterprise Microsoft Dynamics 365 Services" />
+  <meta property="og:title" content="Revona Dynamics Support – Enterprise Microsoft Dynamics 365 Services" />
   <meta property="og:description" content="Enterprise-grade Microsoft Dynamics 365 support, implementation, and managed services." />
   <meta property="og:site_name" content="Revona Dynamics Support" />
   
@@ -25,8 +30,8 @@
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   
-<link rel ="stylesheet" href="style.css" />
- <style>
+  <link rel="stylesheet" href="style.css" />
+  <style>
     :root {
       /* Dark Theme: Light on Dark */
       --bg-primary: #0d1117;
@@ -181,23 +186,14 @@
       margin: 0 auto;
     }
 
-    .card {
-      background: var(--bg-card);
-      padding: 2rem;
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow-card);
-      border: 1px solid var(--border-color);
-      margin-bottom: 2rem;
-    }
-
-    .solutions-grid {
+    .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
       gap: 2rem;
       margin-top: 2rem;
     }
 
-    .solution-card {
+    .service-card {
       background: var(--bg-card);
       border-radius: var(--border-radius);
       border: 1px solid var(--border-color);
@@ -205,15 +201,17 @@
       transition: var(--transition);
       position: relative;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
 
-    .solution-card:hover {
+    .service-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 25px rgba(0,0,0,0.4);
       border-color: var(--accent-blue);
     }
 
-    .solution-icon {
+    .service-icon {
       width: 50px;
       height: 50px;
       border-radius: 10px;
@@ -225,56 +223,62 @@
       font-weight: bold;
     }
 
-    .icon-finance {
+    .icon-support {
       background: rgba(88, 166, 255, 0.15);
       color: var(--accent-blue);
     }
 
-    .icon-warehouse {
+    .icon-implementation {
       background: rgba(126, 231, 135, 0.15);
       color: var(--accent-green);
     }
 
-    .icon-service {
+    .icon-integration {
       background: rgba(188, 140, 255, 0.15);
       color: var(--accent-purple);
     }
 
-    .icon-sales {
+    .icon-development {
       background: rgba(255, 166, 87, 0.15);
       color: var(--accent-orange);
     }
 
-    .icon-ai {
+    .icon-training {
       background: rgba(248, 81, 73, 0.15);
       color: var(--accent-red);
     }
 
-    .solution-card h3 {
+    .icon-licensing {
+      background: rgba(126, 231, 135, 0.15);
+      color: var(--accent-green);
+    }
+
+    .service-card h2 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
       color: var(--text-primary);
     }
 
-    .solution-card p {
+    .service-card > p {
       color: var(--text-secondary);
       margin-bottom: 1.5rem;
     }
 
-    .solution-features {
+    .service-card ul {
       list-style: none;
       padding: 0;
       margin-bottom: 1.5rem;
+      flex-grow: 1;
     }
 
-    .solution-features li {
+    .service-card ul li {
       padding: 0.5rem 0;
       padding-left: 1.5rem;
       position: relative;
       color: var(--text-secondary);
     }
 
-    .solution-features li:before {
+    .service-card ul li:before {
       content: '✓';
       position: absolute;
       left: 0;
@@ -282,110 +286,52 @@
       font-weight: bold;
     }
 
-    .solution-cta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: auto;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background-color: var(--accent-blue);
-      color: white;
-      border: none;
-      border-radius: var(--border-radius);
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: var(--transition);
-      text-decoration: none;
-    }
-
-    .btn:hover {
-      background-color: #4098fc;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 1px solid var(--border-color);
-      color: var(--text-secondary);
-    }
-
-    .btn-outline:hover {
-      background: var(--bg-secondary);
-      color: var(--text-primary);
-      border-color: var(--accent-blue);
-    }
-
-    .implementation-time {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-    }
-
-    .implementation-time:before {
-      content: '⏱️';
-      margin-right: 0.5rem;
-    }
-
-    .benefits-section {
+    .comparison-section {
       margin-top: 4rem;
     }
 
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .benefit-item {
-      text-align: center;
-      padding: 1.5rem;
-    }
-
-    .benefit-icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .benefit-item h3 {
-      margin-bottom: 0.5rem;
-      color: var(--text-primary);
-    }
-
-    .benefit-item p {
-      color: var(--text-secondary);
-    }
-
-    .cta-section {
-      text-align: center;
-      padding: 3rem 2rem;
+    .card {
       background: var(--bg-card);
+      padding: 2rem;
       border-radius: var(--border-radius);
-      margin-top: 4rem;
+      box-shadow: var(--shadow-card);
       border: 1px solid var(--border-color);
+      margin-bottom: 2rem;
     }
 
-    .cta-section h2 {
+    .card h2 {
       margin-bottom: 1rem;
       color: var(--text-primary);
     }
 
-    .cta-section p {
-      color: var(--text-secondary);
-      max-width: 600px;
-      margin: 0 auto 2rem;
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
     }
 
-    .btn-large {
-      padding: 1rem 2rem;
-      font-size: 1.1rem;
+    .comparison-table thead tr {
+      background: var(--bg-secondary);
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .comparison-table th {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .comparison-table td {
+      color: var(--text-secondary);
+    }
+
+    .comparison-table tr:last-child td {
+      border-bottom: none;
     }
 
     footer {
@@ -446,18 +392,17 @@
         font-size: 2rem;
       }
 
-      .solutions-grid {
+      .services-grid {
         grid-template-columns: 1fr;
       }
 
-      .solution-cta {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
+      .comparison-table {
+        font-size: 0.9rem;
       }
 
-      .benefits-grid {
-        grid-template-columns: 1fr;
+      .comparison-table th,
+      .comparison-table td {
+        padding: 0.75rem 0.5rem;
       }
     }
 
@@ -473,15 +418,16 @@
       }
     }
 
-    .solution-card {
+    .service-card {
       animation: fadeInUp 0.5s ease forwards;
     }
 
-    .solution-card:nth-child(1) { animation-delay: 0.1s; }
-    .solution-card:nth-child(2) { animation-delay: 0.2s; }
-    .solution-card:nth-child(3) { animation-delay: 0.3s; }
-    .solution-card:nth-child(4) { animation-delay: 0.4s; }
-    .solution-card:nth-child(5) { animation-delay: 0.5s; }
+    .service-card:nth-child(1) { animation-delay: 0.1s; }
+    .service-card:nth-child(2) { animation-delay: 0.2s; }
+    .service-card:nth-child(3) { animation-delay: 0.3s; }
+    .service-card:nth-child(4) { animation-delay: 0.4s; }
+    .service-card:nth-child(5) { animation-delay: 0.5s; }
+    .service-card:nth-child(6) { animation-delay: 0.6s; }
   </style>
 </head>
 <body>
@@ -489,144 +435,146 @@
   <div class="site">
     <header>
       <a href="index.html" class="brand">
-        <div class="logo-mark">R</div>
+        <img src="assets/dynamics-live-logo.png" alt="Dynamics Live logo" class="logo">
         <div class="brand-text">
-          <h1>Revona Dynamics</h1>
-          <p>Enterprise Microsoft Dynamics 365</p>
+          <h1>Dynamics Live</h1>
+          <p>Innovation in Motion</p>
         </div>
       </a>
       <button class="mobile-menu-btn" id="mobile-menu-toggle">☰</button>
       <nav id="main-nav">
         <a href="index.html">Home</a>
-        <a href="services.html"class="active">Services</a>
+        <a  class="active"  href="services.html">Services</a>
         <a href="solutions.html" >Solutions</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
     </header>
-    <!-- SERVICES PAGE -->
-    <main data-page="services">
-      <article class="card" style="margin: 40px 0">
-        <h1 style="font-size: clamp(32px, 4vw, 42px); margin-bottom: 16px">Our Services</h1>
-        <p style="color: var(--text-secondary); font-size: 18px">Comprehensive services designed around enterprise Dynamics deployments.</p>
 
-        <section style="margin-top: 40px">
+    <main data-page="services">
+      <section class="page-header">
+        <h1>Our Services</h1>
+        <p>Comprehensive services designed around enterprise Dynamics deployments.</p>
+      </section>
+
+      <section class="services-grid">
+        <div class="service-card">
+          <div class="service-icon icon-support">🛟</div>
           <h2>1. Managed Support</h2>
           <p>Tiered SLAs, regional follow-the-sun coverage, proactive monitoring and health checks. Escalation playbooks and designated account team.</p>
-          <!-- Extended -->
-          <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-secondary);">
+          <ul>
             <li>24/7 global incident response with average resolution under 4 hours for P1 issues.</li>
             <li>Monthly performance reviews and root cause analysis reports.</li>
             <li>Proactive patching and upgrade recommendations for 2025 release waves.</li>
-            <li>Integration with Microsoft service updates for seamless compliance.<grok-card data-id="63b48b" data-type="citation_card"></grok-card></li>
+            <li>Integration with Microsoft service updates for seamless compliance.</li>
           </ul>
-        </section>
+        </div>
 
-        <section style="margin-top: 32px">
+        <div class="service-card">
+          <div class="service-icon icon-implementation">🚀</div>
           <h2>2. Implementation & Upgrades</h2>
           <p>Agile delivery with governance—requirements, solution architecture, automated testing, and go-live support.</p>
-          <!-- Extended -->
-          <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-secondary);">
+          <ul>
             <li>End-to-end project management using Azure DevOps.</li>
             <li>Custom data migration tools for legacy systems.</li>
             <li>Post-go-live hypercare for 30 days.</li>
-            <li>Specialized upgrades for 2025 wave 2 features like enhanced Copilot.<grok-card data-id="f79fa0" data-type="citation_card"></grok-card></li>
+            <li>Specialized upgrades for 2025 wave 2 features like enhanced Copilot.</li>
           </ul>
-        </section>
+        </div>
 
-        <section style="margin-top: 32px">
+        <div class="service-card">
+          <div class="service-icon icon-integration">🔗</div>
           <h2>3. Integrations & APIs</h2>
           <p>Design and operate resilient integrations using Azure Service Bus, Logic Apps, or middleware.</p>
-          <!-- Extended -->
-          <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-secondary);">
+          <ul>
             <li>Support for REST, SOAP, and OData endpoints.</li>
             <li>Error handling and retry mechanisms for high availability.</li>
             <li>Performance tuning for high-volume data flows.</li>
-            <li>New AI agent integrations from Power Platform wave 2.<grok-card data-id="c09522" data-type="citation_card"></grok-card></li>
+            <li>New AI agent integrations from Power Platform wave 2.</li>
           </ul>
-        </section>
+        </div>
 
-        <section style="margin-top: 32px">
+        <div class="service-card">
+          <div class="service-icon icon-development">💻</div>
           <h2>4. Custom Development</h2>
           <p>Extension development using AL (Business Central), X++ for F&O, and supported patterns for upgradeability.</p>
-          <!-- Extended -->
-          <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-secondary);">
+          <ul>
             <li>Low-code extensions via Power Apps.</li>
             <li>Custom plugins with event-driven architecture.</li>
             <li>Unit testing and CI/CD pipeline integration.</li>
-            <li>Custom AI-driven workflows leveraging 2025 updates.<grok-card data-id="c77390" data-type="citation_card"></grok-card></li>
+            <li>Custom AI-driven workflows leveraging 2025 updates.</li>
           </ul>
-        </section>
+        </div>
 
-        <section style="margin-top: 32px">
+        <div class="service-card">
+          <div class="service-icon icon-training">📚</div>
           <h2>5. Training & Adoption</h2>
           <p>Tailored onboarding, role-based learning paths, training materials, and hands-on workshops.</p>
-          <!-- Extended -->
-          <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-secondary);">
+          <ul>
             <li>Virtual and in-person sessions.</li>
             <li>Custom e-learning modules hosted on LMS.</li>
             <li>Adoption metrics tracking and coaching.</li>
-            <li>Workshops on new 2025 features like improved financial reporting.<grok-card data-id="fe69ba" data-type="citation_card"></grok-card></li>
+            <li>Workshops on new 2025 features like improved financial reporting.</li>
           </ul>
-        </section>
+        </div>
 
-        <section style="margin-top: 32px">
+        <div class="service-card">
+          <div class="service-icon icon-licensing">📋</div>
           <h2>6. Licensing & Audit</h2>
           <p>Inventory, entitlement mapping and cost optimization; we prepare you for audits and negotiations.</p>
-          <!-- Extended -->
-          <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-secondary);">
+          <ul>
             <li>License usage analytics via Power BI reports.</li>
             <li>Audit defense preparation and mock sessions.</li>
             <li>Negotiation support with Microsoft representatives.</li>
-            <li>Optimization for wave 2 licensing changes starting October 2025.<grok-card data-id="dccad5" data-type="citation_card"></grok-card></li>
+            <li>Optimization for wave 2 licensing changes starting October 2025.</li>
           </ul>
-        </section>
+        </div>
+      </section>
 
-        <!-- New: Service Comparison Table -->
-        <section style="margin-top: 40px;">
+      <section class="comparison-section">
+        <div class="card">
           <h2>Service Comparison</h2>
-          <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+          <table class="comparison-table">
             <thead>
-              <tr style="background: var(--bg-secondary);">
-                <th style="padding: 1rem; text-align: left; border-bottom: 1px solid var(--border-color);">Service</th>
-                <th style="padding: 1rem; text-align: left; border-bottom: 1px solid var(--border-color);">Core Features</th>
-                <th style="padding: 1rem; text-align: left; border-bottom: 1px solid var(--border-color);">SLA</th>
+              <tr>
+                <th>Service</th>
+                <th>Core Features</th>
+                <th>SLA</th>
               </tr>
             </thead>
             <tbody>
-              <tr style="border-bottom: 1px solid var(--border-color);">
-                <td style="padding: 1rem;">Managed Support</td>
-                <td style="padding: 1rem;">24/7 Monitoring</td>
-                <td style="padding: 1rem;">P1: 4 hrs</td>
-              </tr>
-              <tr style="border-bottom: 1px solid var(--border-color);">
-                <td style="padding: 1rem;">Implementation</td>
-                <td style="padding: 1rem;">Agile Delivery</td>
-                <td style="padding: 1rem;">Project-based</td>
+              <tr>
+                <td>Managed Support</td>
+                <td>24/7 Monitoring</td>
+                <td>P1: 4 hrs</td>
               </tr>
               <tr>
-                <td style="padding: 1rem;">Integrations</td>
-                <td style="padding: 1rem;">API & Middleware</td>
-                <td style="padding: 1rem;">99.9% Uptime</td>
+                <td>Implementation</td>
+                <td>Agile Delivery</td>
+                <td>Project-based</td>
+              </tr>
+              <tr>
+                <td>Integrations</td>
+                <td>API & Middleware</td>
+                <td>99.9% Uptime</td>
               </tr>
             </tbody>
           </table>
-        </section>
-      </article>
+        </div>
+      </section>
     </main>
-
-
 
     <footer role="contentinfo">
       <p>© <span id="year"></span> Revona Dynamics Support. All rights reserved.</p>
-        <nav aria-label="Footer navigation">
-            <a href="privacy.html">Privacy Policy</a> | 
-            <a href="terms.html">Terms of Service</a> | 
-            <a href="contact.html">Contact Us</a>       
+      <nav aria-label="Footer navigation">
+        <a href="privacy.html">Privacy Policy</a> | 
+        <a href="terms.html">Terms of Service</a> | 
+        <a href="contact.html">Contact Us</a>
+      </nav>
     </footer>
   </div>
 
-   <script>
+  <script>
     function toggleFaq(element) {
       const answer = element.nextElementSibling;
       const icon = element.querySelector('span:last-child');
@@ -663,11 +611,8 @@
         // Simulate API call
         setTimeout(() => {
           try {
-            // Store data
+            // Store data in memory (not localStorage)
             data.timestamp = new Date().toISOString();
-            const stored = JSON.parse(localStorage.getItem(storageKey) || '[]');
-            stored.push(data);
-            localStorage.setItem(storageKey, JSON.stringify(stored));
             
             // Show success
             $(`#${resultId}`).text('Thank you! Your request has been received.').addClass('success').show();
@@ -810,7 +755,7 @@
         });
         
         // Hover animations for cards
-        $('.card, .service').hover(
+        $('.service-card').hover(
           function() {
             $(this).stop().animate({ boxShadow: '0 8px 24px rgba(0,0,0,0.4)' }, 200);
           },
@@ -827,7 +772,5 @@
       
     })(jQuery);
   </script>
-  
-
 </body>
 </html>

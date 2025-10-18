@@ -5,17 +5,36 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Revona Dynamics Support — Enterprise Microsoft Dynamics 365 Services</title>
-  <meta name="description" content="Enterprise-grade Microsoft Dynamics 365 support, implementation, integrations, training, and managed services. Trusted by mid-market and enterprise customers." />
-  <meta name="keywords" content="Microsoft Dynamics 365, Dynamics Support, Enterprise ERP, Business Central, Finance Operations, Dynamics Implementation" />
+  <title>About Revona Dynamics Support – Enterprise Microsoft Dynamics 365 Services Partner</title>
+  <meta name="description" content="Learn about Revona Dynamics Support, a specialist Microsoft Dynamics 365 services firm with 150+ enterprise clients worldwide. Certified consultants, proven expertise since 2018." />
+  <meta name="keywords" content="Microsoft Dynamics 365, Dynamics Partner, Enterprise ERP Consultants, Business Central Experts, Dynamics Support Team, Microsoft Gold Partner" />
   <meta name="author" content="Revona Dynamics Support" />
-  <meta name="theme-color" content="#4a90e2">
+  <meta name="theme-color" content="#0d1117">
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Revona Dynamics Support — Enterprise Microsoft Dynamics 365 Services" />
-  <meta property="og:description" content="Enterprise-grade Microsoft Dynamics 365 support, implementation, and managed services." />
+  <meta property="og:title" content="About Revona Dynamics Support – Enterprise Dynamics 365 Partner" />
+  <meta property="og:description" content="Specialist Microsoft Dynamics services firm with 150+ enterprise clients worldwide. Certified expertise since 2018." />
   <meta property="og:site_name" content="Revona Dynamics Support" />
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Revona Dynamics Support",
+    "description": "Enterprise Microsoft Dynamics 365 services and support partner",
+    "url": "https://revona-dynamics.com",
+    "foundingDate": "2018",
+    "numberOfEmployees": "150+",
+    "areaServed": ["North America", "EMEA", "APAC"],
+    "knowsAbout": ["Microsoft Dynamics 365", "Business Central", "ERP Implementation", "Cloud Integration"]
+  }
+  </script>
   
   <!-- Preload critical fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
@@ -27,7 +46,7 @@
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
-   <style>
+  <style>
     :root {
       /* Dark Theme: Light on Dark */
       --bg-primary: #0d1117;
@@ -64,6 +83,21 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--accent-blue);
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      z-index: 100;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
     .site {
       display: flex;
       flex-direction: column;
@@ -90,18 +124,10 @@
       color: inherit;
     }
 
-    .logo-mark {
+    .logo {
       width: 40px;
       height: 40px;
-      background: var(--accent-blue);
-      color: white;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
       margin-right: 12px;
-      font-size: 24px;
     }
 
     .brand-text h1 {
@@ -178,126 +204,291 @@
     .page-header p {
       font-size: 1.25rem;
       color: var(--text-secondary);
-      max-width: 700px;
+      max-width: 800px;
       margin: 0 auto;
+      line-height: 1.8;
     }
 
-    .card {
-      background: var(--bg-card);
-      padding: 2rem;
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow-card);
-      border: 1px solid var(--border-color);
-      margin-bottom: 2rem;
-    }
-
-    .solutions-grid {
+    .stats-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 2rem;
-      margin-top: 2rem;
+      margin: 3rem 0;
     }
 
-    .solution-card {
+    .stat-card {
       background: var(--bg-card);
       border-radius: var(--border-radius);
       border: 1px solid var(--border-color);
       padding: 2rem;
+      text-align: center;
       transition: var(--transition);
-      position: relative;
-      overflow: hidden;
     }
 
-    .solution-card:hover {
+    .stat-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 25px rgba(0,0,0,0.4);
       border-color: var(--accent-blue);
     }
 
-    .solution-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 10px;
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--accent-blue), var(--accent-green));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .section {
+      background: var(--bg-card);
+      border-radius: var(--border-radius);
+      border: 1px solid var(--border-color);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      transition: var(--transition);
+    }
+
+    .section:hover {
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .section h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 1.5rem;
-      font-size: 1.5rem;
-      font-weight: bold;
+      font-size: 1.25rem;
     }
 
-    .icon-finance {
+    .icon-journey {
       background: rgba(88, 166, 255, 0.15);
       color: var(--accent-blue);
     }
 
-    .icon-warehouse {
+    .icon-values {
       background: rgba(126, 231, 135, 0.15);
       color: var(--accent-green);
     }
 
-    .icon-service {
+    .icon-people {
       background: rgba(188, 140, 255, 0.15);
       color: var(--accent-purple);
     }
 
-    .icon-sales {
+    .icon-locations {
       background: rgba(255, 166, 87, 0.15);
       color: var(--accent-orange);
     }
 
-    .icon-ai {
+    .icon-certifications {
       background: rgba(248, 81, 73, 0.15);
       color: var(--accent-red);
     }
 
-    .solution-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: var(--text-primary);
-    }
-
-    .solution-card p {
+    .section p {
       color: var(--text-secondary);
-      margin-bottom: 1.5rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
     }
 
-    .solution-features {
+    .values-list {
       list-style: none;
       padding: 0;
-      margin-bottom: 1.5rem;
+      margin-top: 1.5rem;
     }
 
-    .solution-features li {
-      padding: 0.5rem 0;
-      padding-left: 1.5rem;
+    .values-list li {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background: var(--bg-secondary);
+      border-radius: var(--border-radius);
+      border-left: 3px solid var(--accent-blue);
+      transition: var(--transition);
+    }
+
+    .values-list li:hover {
+      border-left-color: var(--accent-green);
+      transform: translateX(5px);
+    }
+
+    .values-list strong {
+      color: var(--text-primary);
+      font-size: 1.1rem;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .team-card {
+      background: var(--bg-secondary);
+      border-radius: var(--border-radius);
+      border: 1px solid var(--border-color);
+      padding: 1.5rem;
+      transition: var(--transition);
       position: relative;
-      color: var(--text-secondary);
+      overflow: hidden;
     }
 
-    .solution-features li:before {
-      content: '✓';
+    .team-card::before {
+      content: '';
       position: absolute;
+      top: 0;
       left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .team-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      border-color: var(--accent-blue);
+    }
+
+    .team-name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .team-role {
+      color: var(--accent-blue);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .team-bio {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .locations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .location-item {
+      padding: 1.25rem;
+      background: var(--bg-secondary);
+      border-radius: var(--border-radius);
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .location-item:hover {
+      border-color: var(--accent-orange);
+      transform: translateX(5px);
+    }
+
+    .location-region {
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .location-cities {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    .badges-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .badge {
+      padding: 0.75rem 1.5rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 25px;
+      color: var(--text-primary);
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .badge:hover {
+      background: var(--accent-blue);
+      border-color: var(--accent-blue);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(88, 166, 255, 0.3);
+    }
+
+    .badge::before {
+      content: '✓';
       color: var(--accent-green);
       font-weight: bold;
     }
 
-    .solution-cta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: auto;
+    .cta-section {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: var(--bg-card);
+      border-radius: var(--border-radius);
+      margin-top: 3rem;
+      border: 1px solid var(--border-color);
+    }
+
+    .cta-section h2 {
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+      font-size: 2rem;
+    }
+
+    .cta-section p {
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
     }
 
     .btn {
       display: inline-block;
-      padding: 0.75rem 1.5rem;
+      padding: 1rem 2rem;
       background-color: var(--accent-blue);
       color: white;
       border: none;
       border-radius: var(--border-radius);
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
       transition: var(--transition);
@@ -307,86 +498,7 @@
     .btn:hover {
       background-color: #4098fc;
       transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 1px solid var(--border-color);
-      color: var(--text-secondary);
-    }
-
-    .btn-outline:hover {
-      background: var(--bg-secondary);
-      color: var(--text-primary);
-      border-color: var(--accent-blue);
-    }
-
-    .implementation-time {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-    }
-
-    .implementation-time:before {
-      content: '⏱️';
-      margin-right: 0.5rem;
-    }
-
-    .benefits-section {
-      margin-top: 4rem;
-    }
-
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .benefit-item {
-      text-align: center;
-      padding: 1.5rem;
-    }
-
-    .benefit-icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .benefit-item h3 {
-      margin-bottom: 0.5rem;
-      color: var(--text-primary);
-    }
-
-    .benefit-item p {
-      color: var(--text-secondary);
-    }
-
-    .cta-section {
-      text-align: center;
-      padding: 3rem 2rem;
-      background: var(--bg-card);
-      border-radius: var(--border-radius);
-      margin-top: 4rem;
-      border: 1px solid var(--border-color);
-    }
-
-    .cta-section h2 {
-      margin-bottom: 1rem;
-      color: var(--text-primary);
-    }
-
-    .cta-section p {
-      color: var(--text-secondary);
-      max-width: 600px;
-      margin: 0 auto 2rem;
-    }
-
-    .btn-large {
-      padding: 1rem 2rem;
-      font-size: 1.1rem;
+      box-shadow: 0 6px 12px rgba(88, 166, 255, 0.4);
     }
 
     footer {
@@ -406,10 +518,12 @@
       color: var(--accent-blue);
       text-decoration: none;
       margin: 0 0.75rem;
+      transition: var(--transition);
     }
 
     footer a:hover {
       text-decoration: underline;
+      color: var(--accent-green);
     }
 
     /* Responsive styles */
@@ -447,17 +561,16 @@
         font-size: 2rem;
       }
 
-      .solutions-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .solution-cta {
-        flex-direction: column;
-        align-items: flex-start;
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
         gap: 1rem;
       }
 
-      .benefits-grid {
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .locations-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -474,198 +587,209 @@
       }
     }
 
-    .solution-card {
+    .section {
       animation: fadeInUp 0.5s ease forwards;
     }
 
-    .solution-card:nth-child(1) { animation-delay: 0.1s; }
-    .solution-card:nth-child(2) { animation-delay: 0.2s; }
-    .solution-card:nth-child(3) { animation-delay: 0.3s; }
-    .solution-card:nth-child(4) { animation-delay: 0.4s; }
-    .solution-card:nth-child(5) { animation-delay: 0.5s; }
+    .section:nth-child(1) { animation-delay: 0.1s; }
+    .section:nth-child(2) { animation-delay: 0.2s; }
+    .section:nth-child(3) { animation-delay: 0.3s; }
+    .section:nth-child(4) { animation-delay: 0.4s; }
+    .section:nth-child(5) { animation-delay: 0.5s; }
+
+    .stat-card {
+      animation: fadeInUp 0.5s ease forwards;
+    }
+
+    .stat-card:nth-child(1) { animation-delay: 0.1s; }
+    .stat-card:nth-child(2) { animation-delay: 0.2s; }
+    .stat-card:nth-child(3) { animation-delay: 0.3s; }
+    .stat-card:nth-child(4) { animation-delay: 0.4s; }
   </style>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
   
   <div class="site">
-    <header>
+    <header role="banner">
       <a href="index.html" class="brand">
-        <div class="logo-mark">R</div>
+        <img src="assets/dynamics-live-logo.png" alt="Dynamics Live logo" class="logo">
         <div class="brand-text">
-          <h1>Revona Dynamics</h1>
-          <p>Enterprise Microsoft Dynamics 365</p>
+          <h1>Dynamics Live</h1>
+          <p>Innovation in Motion</p>
         </div>
       </a>
-      <button class="mobile-menu-btn" id="mobile-menu-toggle">☰</button>
-      <nav id="main-nav">
+      <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        ☰
+      </button>
+      <nav id="main-nav" role="navigation" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
-        <a href="solutions.html" >Solutions</a>
+        <a href="solutions.html">Solutions</a>
         <a href="about.html" class="active">About</a>
         <a href="contact.html">Contact</a>
       </nav>
-    </header>   <!-- ABOUT PAGE -->
-    <main data-page="about">
-      <article class="card" style="margin: 40px 0">
-        <h1 style="font-size: clamp(32px, 4vw, 42px); margin-bottom: 16px">About Revona</h1>
-        <p style="color: var(--text-secondary); font-size: 18px">Revona Dynamics Support is a specialist Microsoft Dynamics services firm focused on enterprise customers. Our consultants hold multiple Microsoft certifications and combine product knowledge with practical business process experience.</p>
-        <!-- Extended: Company History -->
-        <section style="margin-top: 40px">
-          <h2>Our Journey</h2>
-          <p style="margin-top: 1rem; color: var(--text-secondary);">Founded in 2018, Revona has grown from a boutique consultancy to a trusted partner for over 150 enterprise clients worldwide. We've delivered 500+ successful implementations, focusing on innovation and reliability in the Dynamics ecosystem. In 2025, we're leading adoptions of wave 2 releases for AI-enhanced operations.<grok-card data-id="469ca6" data-type="citation_card"></grok-card></p>
-        </section>
+    </header>
 
-        <section style="margin-top: 40px">
-          <h2>Our Values</h2>
-          <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-secondary);">
-            <li><strong>Innovation:</strong> Staying ahead with latest updates like October 2025 cumulative releases.<grok-card data-id="6e0d63" data-type="citation_card"></grok-card></li>
-            <li><strong>Excellence:</strong> Certified in Power Platform and Dynamics 365.</li>
-            <li><strong>Partnership:</strong> Long-term success through proactive support.</li>
-          </ul>
-        </section>
+    <main id="main-content" data-page="about">
+      <section class="page-header">
+        <h1>About Revona Dynamics Support</h1>
+        <p>A specialist Microsoft Dynamics services firm focused on enterprise customers. Our consultants hold multiple Microsoft certifications and combine product knowledge with practical business process experience.</p>
+      </section>
 
-        <section style="margin-top: 40px">
-          <h2>Our People</h2>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 24px">
-            <div class="card">
-              <strong>Sara Khan</strong>
-              <p style="margin-top: 8px">Head of Delivery — 12 yrs Dynamics</p>
-              <p style="margin-top: 0.5rem; color: var(--text-secondary);">Leading global delivery teams with a focus on agile methodologies.</p>
-            </div>
-            <div class="card">
-              <strong>Omar Rizvi</strong>
-              <p style="margin-top: 8px">Principal Architect — Integration & Cloud</p>
-              <p style="margin-top: 0.5rem; color: var(--text-secondary);">Expert in Azure and API architectures for scalable solutions.</p>
-            </div>
-            <div class="card">
-              <strong>Alex Rivera</strong>
-              <p style="margin-top: 8px">Support Director — Managed Services</p>
-              <p style="margin-top: 0.5rem; color: var(--text-secondary);">Overseeing 24/7 operations and client success programs.</p>
-            </div>
-            <div class="card">
-              <strong>Emily Chen</strong>
-              <p style="margin-top: 8px">Training Lead — User Adoption</p>
-              <p style="margin-top: 0.5rem; color: var(--text-secondary);">Designing immersive learning experiences for 10,000+ users annually.</p>
-            </div>
-            <!-- New Team Member -->
-            <div class="card">
-              <strong>Michael Torres</strong>
-              <p style="margin-top: 8px">AI Specialist — Wave 2 Innovations</p>
-              <p style="margin-top: 0.5rem; color: var(--text-secondary);">Focusing on AI agents and Copilot integrations for 2025 releases.</p>
-            </div>
-          </div>
-        </section>
+      <section class="stats-grid" aria-label="Company statistics">
+        <article class="stat-card">
+          <div class="stat-number">150+</div>
+          <div class="stat-label">Enterprise Clients</div>
+        </article>
+        <article class="stat-card">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Implementations</div>
+        </article>
+        <article class="stat-card">
+          <div class="stat-number">7</div>
+          <div class="stat-label">Years Experience</div>
+        </article>
+        <article class="stat-card">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Global Support</div>
+        </article>
+      </section>
 
-        <section style="margin-top: 40px">
-          <h2>Locations</h2>
-          <p style="margin-top: 12px">Remote-first with regional delivery hubs to support local business hours and timezone alignment for enterprise SLAs.</p>
-          <!-- Extended: Specific Locations -->
-          <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-secondary);">
-            <li>North America: New York & Toronto</li>
-            <li>EMEA: London & Dubai</li>
-            <li>APAC: Singapore & Sydney</li>
-            <li>Support for global wave releases with 24/7 alignment.<grok-card data-id="41877a" data-type="citation_card"></grok-card></li>
-          </ul>
-        </section>
-
-        <!-- New: Certifications Section -->
-        <section style="margin-top: 40px;">
-          <h2>Certifications & Partnerships</h2>
-          <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
-            <div class="badge">Microsoft Gold Partner</div>
-            <div class="badge">Dynamics 365 Certified</div>
-            <div class="badge">Power Platform Advanced</div>
-            <div class="badge">ISO 27001 Compliant</div>
-          </div>
-          <p style="margin-top: 1rem; color: var(--text-secondary);">Updated certifications for 2025 release support.</p>
-        </section>
+      <article class="section">
+        <h2>
+          <span class="section-icon icon-journey">🚀</span>
+          Our Journey
+        </h2>
+        <p>Founded in 2018, Revona has grown from a boutique consultancy to a trusted partner for over 150 enterprise clients worldwide. We've delivered 500+ successful implementations, focusing on innovation and reliability in the Dynamics ecosystem. In 2025, we're leading adoptions of wave 2 releases for AI-enhanced operations.</p>
       </article>
-    </main>
 
+      <article class="section">
+        <h2>
+          <span class="section-icon icon-values">💎</span>
+          Our Values
+        </h2>
+        <ul class="values-list">
+          <li>
+            <strong>Innovation</strong><br>
+            Staying ahead with latest updates like October 2025 cumulative releases and cutting-edge AI integrations.
+          </li>
+          <li>
+            <strong>Excellence</strong><br>
+            Certified in Power Platform and Dynamics 365 with continuous training programs for our consultants.
+          </li>
+          <li>
+            <strong>Partnership</strong><br>
+            Long-term success through proactive support and dedicated account management teams.
+          </li>
+        </ul>
+      </article>
+
+      <article class="section">
+        <h2>
+          <span class="section-icon icon-people">👥</span>
+          Our People
+        </h2>
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-name">Sara Khan</div>
+            <div class="team-role">Head of Delivery – 12 yrs Dynamics</div>
+            <p class="team-bio">Leading global delivery teams with a focus on agile methodologies and client success.</p>
+          </div>
+          
+          <div class="team-card">
+            <div class="team-name">Omar Rizvi</div>
+            <div class="team-role">Principal Architect – Integration & Cloud</div>
+            <p class="team-bio">Expert in Azure and API architectures for scalable enterprise solutions.</p>
+          </div>
+          
+          <div class="team-card">
+            <div class="team-name">Alex Rivera</div>
+            <div class="team-role">Support Director – Managed Services</div>
+            <p class="team-bio">Overseeing 24/7 operations and comprehensive client success programs.</p>
+          </div>
+          
+          <div class="team-card">
+            <div class="team-name">Emily Chen</div>
+            <div class="team-role">Training Lead – User Adoption</div>
+            <p class="team-bio">Designing immersive learning experiences for 10,000+ users annually.</p>
+          </div>
+          
+          <div class="team-card">
+            <div class="team-name">Michael Torres</div>
+            <div class="team-role">AI Specialist – Wave 2 Innovations</div>
+            <p class="team-bio">Focusing on AI agents and Copilot integrations for 2025 releases.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="section">
+        <h2>
+          <span class="section-icon icon-locations">🌍</span>
+          Global Locations
+        </h2>
+        <p>Remote-first with regional delivery hubs to support local business hours and timezone alignment for enterprise SLAs.</p>
+        <div class="locations-grid">
+          <div class="location-item">
+            <div class="location-region">North America</div>
+            <div class="location-cities">New York & Toronto</div>
+          </div>
+          <div class="location-item">
+            <div class="location-region">EMEA</div>
+            <div class="location-cities">London & Dubai</div>
+          </div>
+          <div class="location-item">
+            <div class="location-region">APAC</div>
+            <div class="location-cities">Singapore & Sydney</div>
+          </div>
+        </div>
+        <p style="margin-top: 1.5rem;">Support for global wave releases with 24/7 alignment across all major time zones.</p>
+      </article>
+
+      <article class="section">
+        <h2>
+          <span class="section-icon icon-certifications">🏆</span>
+          Certifications & Partnerships
+        </h2>
+        <div class="badges-container">
+          <span class="badge">Microsoft Gold Partner</span>
+          <span class="badge">Dynamics 365 Certified</span>
+          <span class="badge">Power Platform Advanced</span>
+          <span class="badge">ISO 27001 Compliant</span>
+          <span class="badge">Azure Certified</span>
+          <span class="badge">Business Central Specialist</span>
+        </div>
+        <p style="margin-top: 1.5rem;">Updated certifications for 2025 release support, ensuring our team stays at the forefront of Microsoft Dynamics innovations.</p>
+      </article>
+
+      <section class="cta-section">
+        <h2>Ready to Work Together?</h2>
+        <p>Join 150+ enterprise clients who trust Revona for their Dynamics 365 success. Let's discuss how we can support your business transformation.</p>
+        <a href="contact.html" class="btn">Get in Touch</a>
+      </section>
+    </main>
 
     <footer role="contentinfo">
       <p>© <span id="year"></span> Revona Dynamics Support. All rights reserved.</p>
-      <p style="margin-top: 8px; font-size: 14px">
-        <a href="#/contact" style="color: var(--text-muted); text-decoration: none; margin: 0 12px">Contact</a>
-        <a href="#/privacy" style="color: var(--text-muted); text-decoration: none; margin: 0 12px">Privacy Policy</a>
-        <a href="#/terms" style="color: var(--text-muted); text-decoration: none; margin: 0 12px">Terms of Service</a>
-      </p>
+      <nav aria-label="Footer navigation">
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </nav>
     </footer>
   </div>
 
   <script>
-    function toggleFaq(element) {
-      const answer = element.nextElementSibling;
-      const icon = element.querySelector('span:last-child');
-      answer.classList.toggle('open');
-      icon.textContent = answer.classList.contains('open') ? '−' : '+';
-    }
-
-    // Form handling function
-    function handleFormSubmit(formId, resultId, storageKey) {
-      const $form = $(`#${formId}`);
-      if (!$form.length) return;
-      
-      $form.on('submit', function(e) {
-        e.preventDefault();
-        
-        // Basic validation
-        if (!$form[0].checkValidity()) {
-          $form[0].reportValidity();
-          return;
-        }
-        
-        const formData = new FormData(this);
-        const data = {};
-        
-        formData.forEach((value, key) => {
-          data[key] = value.trim();
-        });
-        
-        // Show loading state
-        const $submitBtn = $form.find('button[type="submit"]');
-        const originalText = $submitBtn.text();
-        $submitBtn.prop('disabled', true).text('Sending...');
-        
-        // Simulate API call
-        setTimeout(() => {
-          try {
-            // Store data
-            data.timestamp = new Date().toISOString();
-            const stored = JSON.parse(localStorage.getItem(storageKey) || '[]');
-            stored.push(data);
-            localStorage.setItem(storageKey, JSON.stringify(stored));
-            
-            // Show success
-            $(`#${resultId}`).text('Thank you! Your request has been received.').addClass('success').show();
-            $form[0].reset();
-          } catch (error) {
-            console.error('Form submission error:', error);
-            $(`#${resultId}`).text('An error occurred. Please try again.').addClass('error').show();
-          } finally {
-            $submitBtn.prop('disabled', false).text(originalText);
-          }
-        }, 1000);
-      });
-    }
-
     (function($) {
       'use strict';
       
       // Clean URLs - Remove .html extension if present and update navigation
       function initializeCleanUrls() {
-        // Remove .html from current URL if present
         if (window.location.pathname.endsWith('.html')) {
           const cleanUrl = window.location.pathname.replace('.html', '');
           window.history.replaceState(null, null, cleanUrl);
         }
-        
-        // Update active navigation
         updateActiveNav();
-        
-        // Update all internal links to use clean URLs
-        updateInternalLinks();
       }
       
       // Update active navigation based on current URL
@@ -677,65 +801,12 @@
           link.classList.remove('active');
           const linkHref = link.getAttribute('href');
           
-          // Handle different link formats
           if (linkHref === '/' && currentPath === '/') {
             link.classList.add('active');
-          } else if (linkHref !== '/' && currentPath.includes(linkHref)) {
+          } else if (linkHref !== '/' && currentPath.includes(linkHref.replace('.html', ''))) {
             link.classList.add('active');
           }
         });
-      }
-      
-      // Update internal links to use clean URLs
-      function updateInternalLinks() {
-        // Update CTA buttons
-        $('#contact-cta').on('click', function() {
-          window.location.href = 'contact';
-        });
-        
-        $('#services-cta').on('click', function() {
-          window.location.href = 'services';
-        });
-      }
-      
-      // State management
-      const state = {
-        currentPage: 'home',
-        formSubmitting: false
-      };
-      
-      // DOM elements
-      const $mobileMenuBtn = $('#mobile-menu-toggle');
-      const $mainNav = $('#main-nav');
-      
-      // Utility functions
-      function sanitizeInput(str) {
-        const div = document.createElement('div');
-        div.textContent = str;
-        return div.innerHTML;
-      }
-      
-      function validateEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-      }
-      
-      function showMessage(elementId, message, isError = false) {
-        const $element = $(`#${elementId}`);
-        if (!$element.length) return;
-        
-        $element.text(message)
-          .removeClass('result-message error success')
-          .addClass(isError ? 'result-message error' : 'result-message success')
-          .attr('role', 'status')
-          .show();
-        
-        // Clear message after 5 seconds with animation
-        setTimeout(() => {
-          $element.fadeOut(300, function() {
-            $(this).text('').removeClass('result-message error success');
-          });
-        }, 5000);
       }
       
       // jQuery Animations: Scroll-triggered animations
@@ -764,26 +835,18 @@
         $(window).on('scroll', animateOnScroll);
         
         // Mobile menu toggle
-        $mobileMenuBtn.on('click', function() {
-          $mainNav.slideToggle(300).toggleClass('open');
-          $(this).attr('aria-expanded', $mainNav.hasClass('open'));
-        });
-        
-        // Initialize forms
-        handleFormSubmit('lead-form', 'lead-result', 'revona_leads_v2');
-        
-        // Case study button
-        $('#view-more-case').on('click', function() {
-          alert('Full case study details coming soon! Contact us for more information about this project.');
+        $('#mobile-menu-toggle').on('click', function() {
+          $('#main-nav').slideToggle(300).toggleClass('show');
+          $(this).attr('aria-expanded', $('#main-nav').hasClass('show'));
         });
         
         // Hover animations for cards
-        $('.card, .service').hover(
+        $('.section, .stat-card, .team-card').hover(
           function() {
-            $(this).stop().animate({ boxShadow: '0 8px 24px rgba(0,0,0,0.4)' }, 200);
+            $(this).css('box-shadow', '0 12px 30px rgba(0,0,0,0.5)');
           },
           function() {
-            $(this).stop().animate({ boxShadow: '0 4px 12px rgba(0,0,0,0.3)' }, 200);
+            $(this).css('box-shadow', '');
           }
         );
         

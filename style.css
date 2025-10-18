@@ -60,6 +60,14 @@
       z-index: 100;
       backdrop-filter: blur(10px);
     }
+    .logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
 
     header .brand {
       display: flex;
@@ -491,26 +499,53 @@
       color: var(--accent-blue);
     }
 
-    /* Animations */
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-    }
+   /* Smooth entrance animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
 
-    .animate-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease;
-    }
+.animate-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
 
-    .animate-in.animate-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+.animate-in.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    .animate-delay-1 { transition-delay: 0.1s; }
-    .animate-delay-2 { transition-delay: 0.2s; }
-    .animate-delay-3 { transition-delay: 0.3s; }
+/* Staggered appearance delays */
+.animate-delay-1 { transition-delay: 0.15s; }
+.animate-delay-2 { transition-delay: 0.3s; }
+.animate-delay-3 { transition-delay: 0.45s; }
+
+/* Alternative directions */
+.animate-left {
+  transform: translateX(-20px);
+}
+.animate-right {
+  transform: translateX(20px);
+}
+.animate-fade {
+  transform: none;
+}
+
+/* Floating animation (for icons or decorations) */
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-in {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
 
     /* Responsive */
     @media (max-width: 768px) {
