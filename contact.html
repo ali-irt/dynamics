@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Us — Dynamicare</title>
+  <meta name="description" content="Get in touch with Dynamicare for enterprise Microsoft Dynamics 365 services and support." />
+  <meta name="author" content="Dynamicare" />
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" href="assets/Gemini_Generated_Image_4h6vya4h6vya4h6v.png" sizes="32x32">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+        :root {
+      --bg-primary: #d4cccc;
+      --bg-secondary: #cac9c9;
+      --bg-card: #ada2a2;
+      --text-primary: #1a1a1a;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --accent-blue: #060e1f;
+      --accent-green: #059669;
+      --accent-purple: #7c3aed;
+      --accent-orange: #ea580c;
+      --accent-red: #dc2626;
+      --border-color: #e2e8f0;
+      --shadow-card: 0 4px 12px rgba(0,0,0,0.08);
+      --border-radius: 8px;
+      --transition: all 0.3s ease;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: var(--bg-primary);
+    }
+
+    .site {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .logo-mark {
+      width: 40px;
+      height: 40px;
+      background: var(--accent-blue);
+      color: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 12px;
+      font-size: 20px;
+    }
+
+    .brand-text h1 {
+      font-size: 1.25rem;
+      margin: 0;
+    }
+
+    .brand-text p {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-weight: 500;
+      padding: 0.5rem 0;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--text-primary);
+    }
+
+    nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--accent-blue);
+    }
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 12px;
+  padding: 8px 12px;
+}
+
+.logo-mark img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 8px; /* optional rounded corners */
+}
+
+.brand-text h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+}
+
+.brand-text p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #555;
+}
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .contact-section {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .contact-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .contact-intro {
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+      color: var(--text-secondary);
+    }
+
+    .contact-intro strong {
+      color: var(--accent-blue);
+    }
+
+    .contact-form {
+      background: var(--bg-card);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border-color);
+      margin-bottom: 2rem;
+    }
+
+    .form-header {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .form-header h2 {
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .form-header p {
+      color: var(--text-secondary);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    label span {
+      color: var(--accent-red);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      font-family: inherit;
+      font-size: 1rem;
+      transition: var(--transition);
+      color: var(--text-primary);
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent-blue);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: var(--text-muted);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.875rem 1.75rem;
+      background-color: var(--accent-blue);
+      color: white;
+      border: none;
+      border-radius: var(--border-radius);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      width: 100%;
+    }
+
+    .btn:hover {
+      background-color: #1d4ed8;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn:disabled {
+      background-color: var(--text-muted);
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .form-result {
+      margin-top: 1rem;
+      padding: 0.75rem 1rem;
+      border-radius: var(--border-radius);
+      display: none;
+    }
+
+    .success-msg {
+      background-color: rgba(5, 150, 105, 0.1);
+      color: var(--accent-green);
+      border: 1px solid rgba(5, 150, 105, 0.3);
+    }
+
+    .error {
+      background-color: rgba(220, 38, 38, 0.1);
+      color: var(--accent-red);
+      border: 1px solid rgba(220, 38, 38, 0.3);
+    }
+
+    .field-error {
+      color: var(--accent-red);
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+      display: none;
+    }
+
+    .error-field {
+      border-color: var(--accent-red);
+    }
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .contact-card {
+      background: var(--bg-card);
+      padding: 1.5rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border-color);
+    }
+
+    .contact-card h3 {
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .contact-card p {
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-card a {
+      color: var(--accent-blue);
+      text-decoration: none;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-map {
+      margin-top: 3rem;
+    }
+
+    .contact-map h3 {
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .map-placeholder {
+      background: var(--bg-secondary);
+      padding: 3rem 1rem;
+      text-align: center;
+      border-radius: var(--border-radius);
+      margin-top: 1rem;
+      color: var(--text-muted);
+      border: 1px solid var(--border-color);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: var(--bg-secondary);
+      color: var(--text-primary);
+      border-top: 1px solid var(--border-color);
+      margin-top: 4rem;
+    }
+
+    footer a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      margin: 0 0.75rem;
+    }
+
+    .loading {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s ease-in-out infinite;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 1rem;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-secondary);
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid var(--border-color);
+        gap: 0;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      nav a {
+        padding: 1rem;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      nav a:last-child {
+        border-bottom: none;
+      }
+
+      main {
+        padding: 1rem;
+      }
+
+      .contact-form {
+        padding: 1.5rem;
+      }
+
+      .contact-section h1 {
+        font-size: 2rem;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+    <header>
+     <a href="#" class="brand">
+  <div class="logo-mark">
+    <!-- Logo can be an image or SVG -->
+    <img src="/assets/logo.png" alt="Dynamicare Logo" />
+  </div>
+  <div class="brand-text">
+    <h1>Dynamicare</h1>
+    <p>Innovation in Motion</p>
+  </div>
+</a>
+      <button class="mobile-menu-btn" id="mobile-menu-toggle">☰</button>
+      <nav id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="about.html">About</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contact-section">
+        <h1>Contact Us</h1>
+        <p class="contact-intro">
+          For enterprise enquiries, please fill out the form below
+          Inquire about <strong>2025 wave 2 support</strong> today.
+        </p>
+
+        <form id="contact-page-form" class="contact-form">
+          <div class="form-header">
+            <h2>Get in Touch</h2>
+            <p>Fill out the form below and our team will respond within 24 hours</p>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="c-company">Company <span>*</span></label>
+              <input id="c-company" name="company" required placeholder="Company name" />
+              <div class="field-error" id="company-error">Please enter your company name</div>
+            </div>
+
+            <div class="form-group">
+              <label for="c-name">Name <span>*</span></label>
+              <input id="c-name" name="name" required placeholder="Your name" />
+              <div class="field-error" id="name-error">Please enter your name</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="c-email">Email <span>*</span></label>
+            <input id="c-email" name="email" required type="email" placeholder="you@company.com" />
+            <div class="field-error" id="email-error">Please enter a valid email address</div>
+          </div>
+
+          <div class="form-group">
+            <label for="c-interest">Service of Interest</label>
+            <select id="c-interest" name="interest">
+              <option value="managed-support">Managed Support</option>
+              <option value="implementation">Implementation</option>
+              <option value="integrations">Integrations</option>
+              <option value="training">Training</option>
+              <option value="licensing">Licensing</option>
+              <option value="wave-updates">2025 Wave Updates</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="c-message">Message <span>*</span></label>
+            <textarea id="c-message" name="message" required placeholder="Brief description of your needs"></textarea>
+            <div class="field-error" id="message-error">Please enter a message (minimum 10 characters)</div>
+          </div>
+
+          <button class="btn" type="submit" id="submit-btn">
+            <span id="btn-text">Send Request</span>
+          </button>
+          <div id="contact-page-result" class="form-result"></div>
+        </form>
+
+        <div class="contact-info">
+          <div class="contact-card">
+            <h3>📧 Email</h3>
+            <p><a href="mailto:enterprisesales@dynamicare.com">alikhalid@revona.tech</a></p>
+            <p><a href="mailto:support@dynamicare.com">alikhalid@revona.tech</a></p>
+          </div>
+
+          <div class="contact-card">
+            <h3>📞 Phone</h3>
+            <p> Pakistan:+92 3366237333</p>
+          </div>
+
+          <div class="contact-card">
+            <h3>🕐 Business Hours</h3>
+            <p>24/7 Support Available</p>
+            <p>Monday - Friday: 9:00 AM - 6:00 PM (Local Time)</p>
+          </div>
+        </div>
+
+        <section class="contact-map">
+          <h3>Our Global Hubs</h3>
+          <p>Connect with our regional teams for localized support.</p>
+          <div class="map-placeholder">
+            <p>🌍 Pakistan , United States</p>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year">2025</span> Dynamicare. All rights reserved.</p>
+      <p style="margin-top: 8px; font-size: 14px">
+        <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+<a href="toc.html">Terms & Conditions</a>
+
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.getElementById('main-nav');
+      nav.classList.toggle('show');
+    });
+
+    document.querySelectorAll('#main-nav a').forEach(link => {
+      link.addEventListener('click', function() {
+        document.getElementById('main-nav').classList.remove('show');
+      });
+    });
+
+    // Form validation and submission
+    const form = document.getElementById('contact-page-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText = document.getElementById('btn-text');
+    const result = document.getElementById('contact-page-result');
+
+    function showFieldError(fieldId, message) {
+      const error = document.getElementById(`${fieldId}-error`);
+      const field = document.getElementById(`c-${fieldId}`);
+      error.textContent = message;
+      error.style.display = 'block';
+      field.classList.add('error-field');
+    }
+
+    function hideFieldError(fieldId) {
+      const error = document.getElementById(`${fieldId}-error`);
+      const field = document.getElementById(`c-${fieldId}`);
+      error.style.display = 'none';
+      field.classList.remove('error-field');
+    }
+
+function validateField(fieldId, value) {
+      let isValid = true;
+      let message = '';
+      
+      switch(fieldId) {
+        case 'company':
+          if (!value.trim()) {
+            isValid = false;
+            message = 'Please enter your company name';
+          }
+          break;
+        case 'name':
+          if (!value.trim()) {
+            isValid = false;
+            message = 'Please enter your name';
+          }
+          break;
+        case 'email':
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!value.trim()) {
+            isValid = false;
+            message = 'Please enter your email address';
+          } else if (!emailRegex.test(value)) {
+            isValid = false;
+            message = 'Please enter a valid email address';
+          }
+          break;
+        case 'message':
+          if (!value.trim()) {
+            isValid = false;
+            message = 'Please enter a message';
+          } else if (value.trim().length < 10) {
+            isValid = false;
+            message = 'Message should be at least 10 characters';
+          }
+          break;
+      }
+      
+      if (!isValid) {
+        showFieldError(fieldId, message);
+      } else {
+        hideFieldError(fieldId);
+      }
+      
+      return isValid;
+    }
+
+    // Real-time validation
+    ['company', 'name', 'email', 'message'].forEach(fieldId => {
+      document.getElementById(`c-${fieldId}`).addEventListener('blur', function() {
+        validateField(fieldId, this.value);
+      });
+    });
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Validate all fields
+      const fields = ['company', 'name', 'email', 'message'];
+      let isValid = true;
+      
+      fields.forEach(fieldId => {
+        const fieldValue = document.getElementById(`c-${fieldId}`).value;
+        if (!validateField(fieldId, fieldValue)) {
+          isValid = false;
+        }
+      });
+      
+      if (!isValid) {
+        result.textContent = 'Please fix the errors above before submitting.';
+        result.className = 'form-result error';
+        result.style.display = 'block';
+        return;
+      }
+      
+      // Show loading state
+      submitBtn.disabled = true;
+      btnText.textContent = 'Sending...';
+      
+      // Simulate API call
+      setTimeout(() => {
+        result.textContent = 'Thank you! Your request has been received. We\'ll get back to you within 24 hours.';
+        result.className = 'form-result success-msg';
+        result.style.display = 'block';
+        
+        // Reset form
+        form.reset();
+        
+        // Reset button state
+        submitBtn.disabled = false;
+        btnText.textContent = 'Send Request';
+        
+        // Hide message after 5 seconds
+        setTimeout(() => {
+          result.style.display = 'none';
+        }, 5000);
+      }, 1500);
+    });
+
+    // Update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+   <script>// Handle clean URLs
+if (window.location.pathname.endsWith('.html')) {
+    const cleanUrl = window.location.pathname.replace('.html', '');
+    window.history.replaceState(null, null, cleanUrl);
+}
+
+// Update active navigation
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('nav a');
+    
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        if (currentPath.includes(linkPath.replace('.html', '')) || 
+            (currentPath === '/' && linkPath === 'index.html')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+});</script>
+</body>
+</html>
