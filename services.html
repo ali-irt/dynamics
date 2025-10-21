@@ -5,453 +5,42 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Revona Dynamics Support – Enterprise Microsoft Dynamics 365 Services</title>
-  <meta name="description" content="Enterprise-grade Microsoft Dynamics 365 support, implementation, integrations, training, and managed services. Trusted by mid-market and enterprise customers." />
-  <meta name="keywords" content="Microsoft Dynamics 365, Dynamics Support, Enterprise ERP, Business Central, Finance Operations, Dynamics Implementation" />
-  <meta name="author" content="Revona Dynamics Support" />
-  <meta name="theme-color" content="#4a90e2">
+  <title>Services — Dynamicare Enterprise Microsoft Dynamics 365</title>
+  <meta name="description" content="Enterprise-grade Microsoft Dynamics 365 support, implementation, integrations, training, and managed services." />
+  <meta name="author" content="Dynamicare" />
+  <meta name="theme-color" content="#ffffff">
   
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="assets/favicon.png">
-  <meta name="theme-color" content="#0d1117">
-
-  <!-- Open Graph / Social Media -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Revona Dynamics Support – Enterprise Microsoft Dynamics 365 Services" />
-  <meta property="og:description" content="Enterprise-grade Microsoft Dynamics 365 support, implementation, and managed services." />
-  <meta property="og:site_name" content="Revona Dynamics Support" />
-  
-  <!-- Preload critical fonts -->
+  <link rel="icon" type="png" href="assets/Gemini_Generated_Image_4h6vya4h6vya4h6v.png" sizes="32x32">
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    :root {
-      /* Dark Theme: Light on Dark */
-      --bg-primary: #0d1117;
-      --bg-secondary: #161b22;
-      --bg-card: #21262d;
-      --text-primary: #f0f6fc;
-      --text-secondary: #8b949e;
-      --text-muted: #6e7681;
-      --accent-blue: #58a6ff;
-      --accent-green: #7ee787;
-      --accent-purple: #bc8cff;
-      --accent-orange: #ffa657;
-      --accent-red: #f85149;
-      --border-color: #30363d;
-      --gradient-soft: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
-      --shadow-light: 0 1px 3px rgba(0,0,0,0.5);
-      --shadow-card: 0 4px 12px rgba(0,0,0,0.3);
-      --border-radius: 8px;
-      --transition: all 0.3s ease;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      line-height: 1.6;
-      color: var(--text-primary);
-      background: var(--bg-primary);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .site {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: var(--bg-secondary);
-      border-bottom: 1px solid var(--border-color);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(10px);
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .logo-mark {
-      width: 40px;
-      height: 40px;
-      background: var(--accent-blue);
-      color: white;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      margin-right: 12px;
-      font-size: 24px;
-    }
-
-    .brand-text h1 {
-      font-size: 1.25rem;
-      margin: 0;
-      line-height: 1.2;
-    }
-
-    .brand-text p {
-      font-size: 0.875rem;
-      margin: 0;
-      color: var(--text-secondary);
-    }
-
-    .mobile-menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: var(--text-primary);
-    }
-
-    nav {
-      display: flex;
-      gap: 2rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--text-secondary);
-      font-weight: 500;
-      padding: 0.5rem 0;
-      position: relative;
-      transition: var(--transition);
-    }
-
-    nav a:hover, nav a.active {
-      color: var(--text-primary);
-    }
-
-    nav a.active::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: var(--accent-blue);
-    }
-
-    main {
-      flex: 1;
-      padding: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    .page-header {
-      margin-bottom: 3rem;
-      text-align: center;
-    }
-
-    .page-header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .page-header p {
-      font-size: 1.25rem;
-      color: var(--text-secondary);
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .service-card {
-      background: var(--bg-card);
-      border-radius: var(--border-radius);
-      border: 1px solid var(--border-color);
-      padding: 2rem;
-      transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-      border-color: var(--accent-blue);
-    }
-
-    .service-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .icon-support {
-      background: rgba(88, 166, 255, 0.15);
-      color: var(--accent-blue);
-    }
-
-    .icon-implementation {
-      background: rgba(126, 231, 135, 0.15);
-      color: var(--accent-green);
-    }
-
-    .icon-integration {
-      background: rgba(188, 140, 255, 0.15);
-      color: var(--accent-purple);
-    }
-
-    .icon-development {
-      background: rgba(255, 166, 87, 0.15);
-      color: var(--accent-orange);
-    }
-
-    .icon-training {
-      background: rgba(248, 81, 73, 0.15);
-      color: var(--accent-red);
-    }
-
-    .icon-licensing {
-      background: rgba(126, 231, 135, 0.15);
-      color: var(--accent-green);
-    }
-
-    .service-card h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: var(--text-primary);
-    }
-
-    .service-card > p {
-      color: var(--text-secondary);
-      margin-bottom: 1.5rem;
-    }
-
-    .service-card ul {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 1.5rem;
-      flex-grow: 1;
-    }
-
-    .service-card ul li {
-      padding: 0.5rem 0;
-      padding-left: 1.5rem;
-      position: relative;
-      color: var(--text-secondary);
-    }
-
-    .service-card ul li:before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--accent-green);
-      font-weight: bold;
-    }
-
-    .comparison-section {
-      margin-top: 4rem;
-    }
-
-    .card {
-      background: var(--bg-card);
-      padding: 2rem;
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow-card);
-      border: 1px solid var(--border-color);
-      margin-bottom: 2rem;
-    }
-
-    .card h2 {
-      margin-bottom: 1rem;
-      color: var(--text-primary);
-    }
-
-    .comparison-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-
-    .comparison-table thead tr {
-      background: var(--bg-secondary);
-    }
-
-    .comparison-table th,
-    .comparison-table td {
-      padding: 1rem;
-      text-align: left;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .comparison-table th {
-      color: var(--text-primary);
-      font-weight: 600;
-    }
-
-    .comparison-table td {
-      color: var(--text-secondary);
-    }
-
-    .comparison-table tr:last-child td {
-      border-bottom: none;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: var(--bg-secondary);
-      color: var(--text-primary);
-      border-top: 1px solid var(--border-color);
-      margin-top: 4rem;
-    }
-
-    footer p {
-      margin-bottom: 1rem;
-    }
-
-    footer a {
-      color: var(--accent-blue);
-      text-decoration: none;
-      margin: 0 0.75rem;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Responsive styles */
-    @media (max-width: 768px) {
-      header {
-        padding: 1rem;
-      }
-
-      .mobile-menu-btn {
-        display: block;
-      }
-
-      nav {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--bg-secondary);
-        flex-direction: column;
-        padding: 1rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        border-top: 1px solid var(--border-color);
-      }
-
-      nav.show {
-        display: flex;
-      }
-
-      main {
-        padding: 1rem;
-      }
-
-      .page-header h1 {
-        font-size: 2rem;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .comparison-table {
-        font-size: 0.9rem;
-      }
-
-      .comparison-table th,
-      .comparison-table td {
-        padding: 0.75rem 0.5rem;
-      }
-    }
-
-    /* Animation for cards */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .service-card {
-      animation: fadeInUp 0.5s ease forwards;
-    }
-
-    .service-card:nth-child(1) { animation-delay: 0.1s; }
-    .service-card:nth-child(2) { animation-delay: 0.2s; }
-    .service-card:nth-child(3) { animation-delay: 0.3s; }
-    .service-card:nth-child(4) { animation-delay: 0.4s; }
-    .service-card:nth-child(5) { animation-delay: 0.5s; }
-    .service-card:nth-child(6) { animation-delay: 0.6s; }
-  </style>
+<link rel="stylesheet" href="services.css" />
 </head>
 <body>
-  
   <div class="site">
     <header>
-      <a href="index.html" class="brand">
-        <img src="assets/dynamics-live-logo.png" alt="Dynamics Live logo" class="logo">
-        <div class="brand-text">
-          <h1>Dynamics Live</h1>
-          <p>Innovation in Motion</p>
-        </div>
-      </a>
+    <a href="index.html" class="brand">
+  <div class="logo-mark">
+    <!-- Logo can be an image or SVG -->
+    <img src="assets/logo.png" alt="Dynamicare Logo" />
+  </div>
+  <div class="brand-text">
+    <h1>Dynamicare</h1>
+    <p>Innovation in Motion</p>
+  </div>
+</a> 
       <button class="mobile-menu-btn" id="mobile-menu-toggle">☰</button>
       <nav id="main-nav">
         <a href="index.html">Home</a>
-        <a  class="active"  href="services.html">Services</a>
-        <a href="solutions.html" >Solutions</a>
+        <a class="active" href="services.html">Services</a>
+        <a href="solutions.html">Solutions</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
     </header>
 
-    <main data-page="services">
+    <main>
       <section class="page-header">
         <h1>Our Services</h1>
         <p>Comprehensive services designed around enterprise Dynamics deployments.</p>
@@ -558,219 +147,75 @@
                 <td>API & Middleware</td>
                 <td>99.9% Uptime</td>
               </tr>
+              <tr>
+                <td>Custom Development</td>
+                <td>Extensions & Plugins</td>
+                <td>Milestone-based</td>
+              </tr>
+              <tr>
+                <td>Training</td>
+                <td>Role-based Learning</td>
+                <td>Flexible Scheduling</td>
+              </tr>
+              <tr>
+                <td>Licensing</td>
+                <td>Optimization & Audit</td>
+                <td>Quarterly Reviews</td>
+              </tr>
             </tbody>
           </table>
         </div>
       </section>
     </main>
 
-    <footer role="contentinfo">
-      <p>© <span id="year"></span> Revona Dynamics Support. All rights reserved.</p>
-      <nav aria-label="Footer navigation">
-        <a href="privacy.html">Privacy Policy</a> | 
-        <a href="terms.html">Terms of Service</a> | 
-        <a href="contact.html">Contact Us</a>
-      </nav>
+     <footer>
+      <p>© <span id="year">2025</span> Dynamicare. All rights reserved.</p>
+      <p style="margin-top: 8px; font-size: 14px">
+        <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+<a href="toc.html">Terms & Conditions</a>
+
+      </p>
     </footer>
   </div>
 
   <script>
-    function toggleFaq(element) {
-      const answer = element.nextElementSibling;
-      const icon = element.querySelector('span:last-child');
-      answer.classList.toggle('open');
-      icon.textContent = answer.classList.contains('open') ? '−' : '+';
-    }
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.getElementById('main-nav');
+      nav.classList.toggle('show');
+    });
 
-    // Form handling function
-    function handleFormSubmit(formId, resultId, storageKey) {
-      const $form = $(`#${formId}`);
-      if (!$form.length) return;
-      
-      $form.on('submit', function(e) {
-        e.preventDefault();
-        
-        // Basic validation
-        if (!$form[0].checkValidity()) {
-          $form[0].reportValidity();
-          return;
-        }
-        
-        const formData = new FormData(this);
-        const data = {};
-        
-        formData.forEach((value, key) => {
-          data[key] = value.trim();
-        });
-        
-        // Show loading state
-        const $submitBtn = $form.find('button[type="submit"]');
-        const originalText = $submitBtn.text();
-        $submitBtn.prop('disabled', true).text('Sending...');
-        
-        // Simulate API call
-        setTimeout(() => {
-          try {
-            // Store data in memory (not localStorage)
-            data.timestamp = new Date().toISOString();
-            
-            // Show success
-            $(`#${resultId}`).text('Thank you! Your request has been received.').addClass('success').show();
-            $form[0].reset();
-          } catch (error) {
-            console.error('Form submission error:', error);
-            $(`#${resultId}`).text('An error occurred. Please try again.').addClass('error').show();
-          } finally {
-            $submitBtn.prop('disabled', false).text(originalText);
-          }
-        }, 1000);
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('#main-nav a').forEach(link => {
+      link.addEventListener('click', function() {
+        document.getElementById('main-nav').classList.remove('show');
       });
-    }
+    });
 
-    (function($) {
-      'use strict';
-      
-      // Clean URLs - Remove .html extension if present and update navigation
-      function initializeCleanUrls() {
-        // Remove .html from current URL if present
-        if (window.location.pathname.endsWith('.html')) {
-          const cleanUrl = window.location.pathname.replace('.html', '');
-          window.history.replaceState(null, null, cleanUrl);
-        }
-        
-        // Update active navigation
-        updateActiveNav();
-        
-        // Update all internal links to use clean URLs
-        updateInternalLinks();
-      }
-      
-      // Update active navigation based on current URL
-      function updateActiveNav() {
-        const currentPath = window.location.pathname;
-        const navLinks = document.querySelectorAll('nav a');
-        
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          const linkHref = link.getAttribute('href');
-          
-          // Handle different link formats
-          if (linkHref === '/' && currentPath === '/') {
-            link.classList.add('active');
-          } else if (linkHref !== '/' && currentPath.includes(linkHref)) {
-            link.classList.add('active');
-          }
-        });
-      }
-      
-      // Update internal links to use clean URLs
-      function updateInternalLinks() {
-        // Update CTA buttons
-        $('#contact-cta').on('click', function() {
-          window.location.href = 'contact';
-        });
-        
-        $('#services-cta').on('click', function() {
-          window.location.href = 'services';
-        });
-      }
-      
-      // State management
-      const state = {
-        currentPage: 'home',
-        formSubmitting: false
-      };
-      
-      // DOM elements
-      const $mobileMenuBtn = $('#mobile-menu-toggle');
-      const $mainNav = $('#main-nav');
-      
-      // Utility functions
-      function sanitizeInput(str) {
-        const div = document.createElement('div');
-        div.textContent = str;
-        return div.innerHTML;
-      }
-      
-      function validateEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-      }
-      
-      function showMessage(elementId, message, isError = false) {
-        const $element = $(`#${elementId}`);
-        if (!$element.length) return;
-        
-        $element.text(message)
-          .removeClass('result-message error success')
-          .addClass(isError ? 'result-message error' : 'result-message success')
-          .attr('role', 'status')
-          .show();
-        
-        // Clear message after 5 seconds with animation
-        setTimeout(() => {
-          $element.fadeOut(300, function() {
-            $(this).text('').removeClass('result-message error success');
-          });
-        }, 5000);
-      }
-      
-      // jQuery Animations: Scroll-triggered animations
-      function animateOnScroll() {
-        $('.animate-in').each(function() {
-          const $this = $(this);
-          if ($this.is(':visible') && !$this.hasClass('animate-visible')) {
-            const delay = $this.data('delay') || 0;
-            setTimeout(() => {
-              $this.addClass('animate-visible').fadeIn(600).css('transform', 'translateY(0)');
-            }, delay * 100);
-          }
-        });
-      }
-      
-      // Initialize everything when document is ready
-      $(document).ready(function() {
-        // Set current year
-        $('#year').text(new Date().getFullYear());
-        
-        // Initialize clean URLs
-        initializeCleanUrls();
-        
-        // Initialize animations
-        animateOnScroll();
-        $(window).on('scroll', animateOnScroll);
-        
-        // Mobile menu toggle
-        $mobileMenuBtn.on('click', function() {
-          $mainNav.slideToggle(300).toggleClass('open');
-          $(this).attr('aria-expanded', $mainNav.hasClass('open'));
-        });
-        
-        // Initialize forms
-        handleFormSubmit('lead-form', 'lead-result', 'revona_leads_v2');
-        
-        // Case study button
-        $('#view-more-case').on('click', function() {
-          alert('Full case study details coming soon! Contact us for more information about this project.');
-        });
-        
-        // Hover animations for cards
-        $('.service-card').hover(
-          function() {
-            $(this).stop().animate({ boxShadow: '0 8px 24px rgba(0,0,0,0.4)' }, 200);
-          },
-          function() {
-            $(this).stop().animate({ boxShadow: '0 4px 12px rgba(0,0,0,0.3)' }, 200);
-          }
-        );
-        
-        // Prevent form resubmission on page refresh
-        if (window.history.replaceState) {
-          window.history.replaceState(null, null, window.location.href);
-        }
-      });
-      
-    })(jQuery);
+    // Update year
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+   <script>// Handle clean URLs
+if (window.location.pathname.endsWith('.html')) {
+    const cleanUrl = window.location.pathname.replace('.html', '');
+    window.history.replaceState(null, null, cleanUrl);
+}
+
+// Update active navigation
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('nav a');
+    
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        if (currentPath.includes(linkPath.replace('.html', '')) || 
+            (currentPath === '/' && linkPath === 'index.html')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+});</script>
 </body>
 </html>

@@ -3,503 +3,38 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Solutions — Revona Dynamics Support</title>
-
+  <title>Solutions — Dynamicare</title>
   <meta name="description" content="Prebuilt Dynamics 365 accelerators to speed implementations and reduce risk for enterprises." />
-  <meta name="keywords" content="Microsoft Dynamics 365, Dynamics Solutions, Accelerators, ERP, CRM" />
-  <meta name="author" content="Revona Dynamics Support" />
-  <meta name="theme-color" content="#4a90e2" />
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32">
-<link rel="apple-touch-icon" href="assets/favicon.png">
-<meta name="theme-color" content="#0d1117">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta name="author" content="Dynamicare" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" type="image/png" href="assets/Gemini_Generated_Image_4h6vya4h6vya4h6v.png" sizes="32x32">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<link rel ="stylesheet" href="style.css" />
-  <style>
-    :root {
-      /* Dark Theme: Light on Dark */
-      --bg-primary: #0d1117;
-      --bg-secondary: #161b22;
-      --bg-card: #21262d;
-      --text-primary: #f0f6fc;
-      --text-secondary: #8b949e;
-      --text-muted: #6e7681;
-      --accent-blue: #58a6ff;
-      --accent-green: #7ee787;
-      --accent-purple: #bc8cff;
-      --accent-orange: #ffa657;
-      --accent-red: #f85149;
-      --border-color: #30363d;
-      --gradient-soft: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
-      --shadow-light: 0 1px 3px rgba(0,0,0,0.5);
-      --shadow-card: 0 4px 12px rgba(0,0,0,0.3);
-      --border-radius: 8px;
-      --transition: all 0.3s ease;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      line-height: 1.6;
-      color: var(--text-primary);
-      background: var(--bg-primary);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .site {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: var(--bg-secondary);
-      border-bottom: 1px solid var(--border-color);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(10px);
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .logo-mark {
-      width: 40px;
-      height: 40px;
-      background: var(--accent-blue);
-      color: white;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      margin-right: 12px;
-      font-size: 24px;
-    }
-
-    .brand-text h1 {
-      font-size: 1.25rem;
-      margin: 0;
-      line-height: 1.2;
-    }
-
-    .brand-text p {
-      font-size: 0.875rem;
-      margin: 0;
-      color: var(--text-secondary);
-    }
-
-    .mobile-menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: var(--text-primary);
-    }
-
-    nav {
-      display: flex;
-      gap: 2rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--text-secondary);
-      font-weight: 500;
-      padding: 0.5rem 0;
-      position: relative;
-      transition: var(--transition);
-    }
-
-    nav a:hover, nav a.active {
-      color: var(--text-primary);
-    }
-
-    nav a.active::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: var(--accent-blue);
-    }
-
-    main {
-      flex: 1;
-      padding: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    .page-header {
-      margin-bottom: 3rem;
-      text-align: center;
-    }
-
-    .page-header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .page-header p {
-      font-size: 1.25rem;
-      color: var(--text-secondary);
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .card {
-      background: var(--bg-card);
-      padding: 2rem;
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow-card);
-      border: 1px solid var(--border-color);
-      margin-bottom: 2rem;
-    }
-
-    .solutions-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .solution-card {
-      background: var(--bg-card);
-      border-radius: var(--border-radius);
-      border: 1px solid var(--border-color);
-      padding: 2rem;
-      transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .solution-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-      border-color: var(--accent-blue);
-    }
-
-    .solution-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .icon-finance {
-      background: rgba(88, 166, 255, 0.15);
-      color: var(--accent-blue);
-    }
-
-    .icon-warehouse {
-      background: rgba(126, 231, 135, 0.15);
-      color: var(--accent-green);
-    }
-
-    .icon-service {
-      background: rgba(188, 140, 255, 0.15);
-      color: var(--accent-purple);
-    }
-
-    .icon-sales {
-      background: rgba(255, 166, 87, 0.15);
-      color: var(--accent-orange);
-    }
-
-    .icon-ai {
-      background: rgba(248, 81, 73, 0.15);
-      color: var(--accent-red);
-    }
-
-    .solution-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: var(--text-primary);
-    }
-
-    .solution-card p {
-      color: var(--text-secondary);
-      margin-bottom: 1.5rem;
-    }
-
-    .solution-features {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 1.5rem;
-    }
-
-    .solution-features li {
-      padding: 0.5rem 0;
-      padding-left: 1.5rem;
-      position: relative;
-      color: var(--text-secondary);
-    }
-
-    .solution-features li:before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--accent-green);
-      font-weight: bold;
-    }
-
-    .solution-cta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: auto;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background-color: var(--accent-blue);
-      color: white;
-      border: none;
-      border-radius: var(--border-radius);
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: var(--transition);
-      text-decoration: none;
-    }
-
-    .btn:hover {
-      background-color: #4098fc;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 1px solid var(--border-color);
-      color: var(--text-secondary);
-    }
-
-    .btn-outline:hover {
-      background: var(--bg-secondary);
-      color: var(--text-primary);
-      border-color: var(--accent-blue);
-    }
-
-    .implementation-time {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-    }
-
-    .implementation-time:before {
-      content: '⏱️';
-      margin-right: 0.5rem;
-    }
-
-    .benefits-section {
-      margin-top: 4rem;
-    }
-
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .benefit-item {
-      text-align: center;
-      padding: 1.5rem;
-    }
-
-    .benefit-icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .benefit-item h3 {
-      margin-bottom: 0.5rem;
-      color: var(--text-primary);
-    }
-
-    .benefit-item p {
-      color: var(--text-secondary);
-    }
-
-    .cta-section {
-      text-align: center;
-      padding: 3rem 2rem;
-      background: var(--bg-card);
-      border-radius: var(--border-radius);
-      margin-top: 4rem;
-      border: 1px solid var(--border-color);
-    }
-
-    .cta-section h2 {
-      margin-bottom: 1rem;
-      color: var(--text-primary);
-    }
-
-    .cta-section p {
-      color: var(--text-secondary);
-      max-width: 600px;
-      margin: 0 auto 2rem;
-    }
-
-    .btn-large {
-      padding: 1rem 2rem;
-      font-size: 1.1rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: var(--bg-secondary);
-      color: var(--text-primary);
-      border-top: 1px solid var(--border-color);
-      margin-top: 4rem;
-    }
-
-    footer p {
-      margin-bottom: 1rem;
-    }
-
-    footer a {
-      color: var(--accent-blue);
-      text-decoration: none;
-      margin: 0 0.75rem;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Responsive styles */
-    @media (max-width: 768px) {
-      header {
-        padding: 1rem;
-      }
-
-      .mobile-menu-btn {
-        display: block;
-      }
-
-      nav {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--bg-secondary);
-        flex-direction: column;
-        padding: 1rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        border-top: 1px solid var(--border-color);
-      }
-
-      nav.show {
-        display: flex;
-      }
-
-      main {
-        padding: 1rem;
-      }
-
-      .page-header h1 {
-        font-size: 2rem;
-      }
-
-      .solutions-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .solution-cta {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-      }
-
-      .benefits-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* Animation for cards */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .solution-card {
-      animation: fadeInUp 0.5s ease forwards;
-    }
-
-    .solution-card:nth-child(1) { animation-delay: 0.1s; }
-    .solution-card:nth-child(2) { animation-delay: 0.2s; }
-    .solution-card:nth-child(3) { animation-delay: 0.3s; }
-    .solution-card:nth-child(4) { animation-delay: 0.4s; }
-    .solution-card:nth-child(5) { animation-delay: 0.5s; }
-  </style>
+  
+<link rel="stylesheet" href="solutions.css" />
 </head>
 <body>
   <div class="site">
     <header>
-  <a href="index.html" class="brand">
-    <img src="assets/dynamics-live-logo.png" alt="Dynamics Live logo" class="logo">
-    <div class="brand-text">
-      <h1>Dynamics Live</h1>
-      <p>Innovation in Motion</p>
-    </div>
-  </a>
-<button class="mobile-menu-btn" id="mobile-menu-toggle">☰</button>
+    <a href="#" class="brand">
+  <div class="logo-mark">
+    <!-- Logo can be an image or SVG -->
+    <img src="assets/logo.png" alt="Dynamicare Logo" />
+  </div>
+  <div class="brand-text">
+    <h1>Dynamicare</h1>
+    <p>Innovation in Motion</p>
+  </div>
+</a> 
+      </a>
+      <button class="mobile-menu-btn" id="mobile-menu-toggle">☰</button>
       <nav id="main-nav">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
-        <a class = "active" href="solutions.html" >Solutions</a>
+        <a class="active" href="solutions.html">Solutions</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
-</header>
+    </header>
 
     <main>
       <section class="page-header">
@@ -519,7 +54,7 @@
             <li>Tax compliance and localization</li>
           </ul>
           <div class="solution-cta">
-            <a href="contact.html?interest=finance-templates" class="btn">Request Demo</a>
+            <a href="contact.html" class="btn">Request Demo</a>
             <span class="implementation-time">2-3 weeks</span>
           </div>
         </div>
@@ -535,7 +70,7 @@
             <li>IoT tracking and predictive analytics</li>
           </ul>
           <div class="solution-cta">
-            <a href="contact.html?interest=warehouse" class="btn">Request Demo</a>
+            <a href="contact.html" class="btn">Request Demo</a>
             <span class="implementation-time">4-6 weeks</span>
           </div>
         </div>
@@ -551,7 +86,7 @@
             <li>Unified Omnichannel integration</li>
           </ul>
           <div class="solution-cta">
-            <a href="contact.html?interest=customer-service" class="btn">Request Demo</a>
+            <a href="contact.html" class="btn">Request Demo</a>
             <span class="implementation-time">3-4 weeks</span>
           </div>
         </div>
@@ -567,7 +102,7 @@
             <li>Automated follow-up sequences</li>
           </ul>
           <div class="solution-cta">
-            <a href="contact.html?interest=sales-acceleration" class="btn">Request Demo</a>
+            <a href="contact.html" class="btn">Request Demo</a>
             <span class="implementation-time">2-3 weeks</span>
           </div>
         </div>
@@ -583,7 +118,7 @@
             <li>Business Central integration</li>
           </ul>
           <div class="solution-cta">
-            <a href="contact.html?interest=ai-accelerator" class="btn">Request Demo</a>
+            <a href="contact.html" class="btn">Request Demo</a>
             <span class="implementation-time">4-5 weeks</span>
           </div>
         </div>
@@ -625,46 +160,30 @@
     </main>
 
     <footer>
-      <p>© <span id="year"></span> Revona Dynamics Support. All rights reserved.</p>
+      <p>© <span id="year">2025</span> Dynamicare. All rights reserved.</p>
       <p>
-        <a href="contact.html">Contact</a> |
-        <a href="privacy.html">Privacy Policy</a> |
-        <a href="terms.html">Terms of Service</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
       </p>
     </footer>
   </div>
 
   <script>
-    // Mobile menu toggle
-    $('#mobile-menu-toggle').on('click', function() {
-      $('#main-nav').slideToggle(200).toggleClass('show');
+    document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.getElementById('main-nav');
+      nav.classList.toggle('show');
     });
 
-    // Dynamic year
-    $('#year').text(new Date().getFullYear());
-
-    // Add animation on scroll
-    $(document).ready(function() {
-      // Animate solution cards when they come into view
-      function checkVisibility() {
-        $('.solution-card').each(function() {
-          var elementTop = $(this).offset().top;
-          var elementBottom = elementTop + $(this).outerHeight();
-          var viewportTop = $(window).scrollTop();
-          var viewportBottom = viewportTop + $(window).height();
-          
-          if (elementBottom > viewportTop && elementTop < viewportBottom) {
-            $(this).addClass('animate-visible');
-          }
-        });
-      }
-      
-      // Check visibility on load and scroll
-      checkVisibility();
-      $(window).on('scroll', checkVisibility);
+    document.querySelectorAll('#main-nav a').forEach(link => {
+      link.addEventListener('click', function() {
+        document.getElementById('main-nav').classList.remove('show');
+      });
     });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-      <script>// Handle clean URLs
+   <script>// Handle clean URLs
 if (window.location.pathname.endsWith('.html')) {
     const cleanUrl = window.location.pathname.replace('.html', '');
     window.history.replaceState(null, null, cleanUrl);
@@ -685,6 +204,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });</script>
-
 </body>
 </html>

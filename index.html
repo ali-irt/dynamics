@@ -4,551 +4,123 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Favicon -->
-<link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32">
-<link rel="apple-touch-icon" href="assets/favicon.png">
-<meta name="theme-color" content="#0d1117">
+  <link rel="icon" type="image/png" href="assets/Gemini_Generated_Image_4h6vya4h6vya4h6v.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/Gemini_Generated_Image_4h6vya4h6vya4h6v.png">
+  <meta name="theme-color" content="#ffffff">
 
-  <title>Revona Dynamics Support — Enterprise Microsoft Dynamics 365 Services</title>
-  <meta name="description" content="Enterprise-grade Microsoft Dynamics 365 support, implementation, integrations, training, and managed services. Trusted by mid-market and enterprise customers." />
-  <meta name="keywords" content="Microsoft Dynamics 365, Dynamics Support, Enterprise ERP, Business Central, Finance Operations, Dynamics Implementation" />
-  <meta name="author" content="Revona Dynamics Support" />
-  <meta name="theme-color" content="#4a90e2">
-  
-  <!-- Open Graph / Social Media -->
+  <title>Dynamicare — Enterprise Microsoft Dynamics 365 Services</title>
+  <meta name="description" content="Dynamicare provides enterprise-level Microsoft Dynamics 365 implementation, support, integration, and managed services. Certified experts helping global businesses achieve success with Dynamics 365 ERP and CRM." />
+  <meta name="keywords" content="Microsoft Dynamics 365, Dynamics 365 Services, Dynamics 365 Implementation, Dynamics 365 Support, Dynamics 365 Consulting, Dynamics 365 Integration, Business Central, Finance and Operations, Power Platform" />
+  <meta name="author" content="Dynamicare" />
+  <link rel="canonical" href="https://dynamicare.com/" />
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Revona Dynamics Support — Enterprise Microsoft Dynamics 365 Services" />
-  <meta property="og:description" content="Enterprise-grade Microsoft Dynamics 365 support, implementation, and managed services." />
-  <meta property="og:site_name" content="Revona Dynamics Support" />
-  
-  <!-- Preload critical fonts -->
+  <meta property="og:title" content="Dynamicare — Enterprise Microsoft Dynamics 365 Services" />
+  <meta property="og:description" content="Enterprise-grade Dynamics 365 implementation, support, and managed services by certified professionals." />
+  <meta property="og:image" content="https://dynamicare.com/assets/logo.png" />
+  <meta property="og:site_name" content="Dynamicare" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Dynamicare",
+    "url": "https://dynamicare.com",
+    "logo": "https://dynamicare.com/assets/logo.png",
+    "sameAs": [
+      "https://www.linkedin.com/company/dynamicare",
+      "https://twitter.com/dynamicare"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-800-555-3650",
+      "contactType": "Sales & Support",
+      "areaServed": "Global",
+      "availableLanguage": ["English"]
+    }
+  }
+  </script>
+
+  <!-- Service Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Microsoft Dynamics 365 Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "Dynamicare"
+    },
+    "serviceType": ["Dynamics 365 Implementation", "Dynamics 365 Managed Support", "Dynamics 365 Integration"],
+    "areaServed": ["United States", "United Kingdom", "Canada", "Pakistan", "UAE", "Global"],
+    "description": "Certified Microsoft Dynamics 365 implementation, integration, and support services for enterprises."
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <link rel="stylesheet" href="/style.css" />
-   <style>
-    :root {
-      /* Dark Theme: Light on Dark */
-      --bg-primary: #0d1117;
-      --bg-secondary: #161b22;
-      --bg-card: #21262d;
-      --text-primary: #f0f6fc;
-      --text-secondary: #8b949e;
-      --text-muted: #6e7681;
-      --accent-blue: #58a6ff;
-      --accent-green: #7ee787;
-      --accent-purple: #bc8cff;
-      --accent-orange: #ffa657;
-      --accent-red: #f85149;
-      --border-color: #30363d;
-      --gradient-soft: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
-      --shadow-light: 0 1px 3px rgba(0,0,0,0.5);
-      --shadow-card: 0 4px 12px rgba(0,0,0,0.3);
-      --border-radius: 8px;
-      --transition: all 0.3s ease;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      line-height: 1.6;
-      color: var(--text-primary);
-      background: var(--bg-primary);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .site {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: var(--bg-secondary);
-      border-bottom: 1px solid var(--border-color);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(10px);
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .logo-mark {
-      width: 40px;
-      height: 40px;
-      background: var(--accent-blue);
-      color: white;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      margin-right: 12px;
-      font-size: 24px;
-    }
-
-    .brand-text h1 {
-      font-size: 1.25rem;
-      margin: 0;
-      line-height: 1.2;
-    }
-
-    .brand-text p {
-      font-size: 0.875rem;
-      margin: 0;
-      color: var(--text-secondary);
-    }
-
-    .mobile-menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: var(--text-primary);
-    }
-
-    nav {
-      display: flex;
-      gap: 2rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--text-secondary);
-      font-weight: 500;
-      padding: 0.5rem 0;
-      position: relative;
-      transition: var(--transition);
-    }
-
-    nav a:hover, nav a.active {
-      color: var(--text-primary);
-    }
-
-    nav a.active::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: var(--accent-blue);
-    }
-
-    main {
-      flex: 1;
-      padding: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    .page-header {
-      margin-bottom: 3rem;
-      text-align: center;
-    }
-
-    .page-header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .page-header p {
-      font-size: 1.25rem;
-      color: var(--text-secondary);
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .card {
-      background: var(--bg-card);
-      padding: 2rem;
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow-card);
-      border: 1px solid var(--border-color);
-      margin-bottom: 2rem;
-    }
-
-    .solutions-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .solution-card {
-      background: var(--bg-card);
-      border-radius: var(--border-radius);
-      border: 1px solid var(--border-color);
-      padding: 2rem;
-      transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .solution-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-      border-color: var(--accent-blue);
-    }
-
-    .solution-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .icon-finance {
-      background: rgba(88, 166, 255, 0.15);
-      color: var(--accent-blue);
-    }
-
-    .icon-warehouse {
-      background: rgba(126, 231, 135, 0.15);
-      color: var(--accent-green);
-    }
-
-    .icon-service {
-      background: rgba(188, 140, 255, 0.15);
-      color: var(--accent-purple);
-    }
-
-    .icon-sales {
-      background: rgba(255, 166, 87, 0.15);
-      color: var(--accent-orange);
-    }
-
-    .icon-ai {
-      background: rgba(248, 81, 73, 0.15);
-      color: var(--accent-red);
-    }
-
-    .solution-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: var(--text-primary);
-    }
-
-    .solution-card p {
-      color: var(--text-secondary);
-      margin-bottom: 1.5rem;
-    }
-
-    .solution-features {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 1.5rem;
-    }
-
-    .solution-features li {
-      padding: 0.5rem 0;
-      padding-left: 1.5rem;
-      position: relative;
-      color: var(--text-secondary);
-    }
-
-    .solution-features li:before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--accent-green);
-      font-weight: bold;
-    }
-
-    .solution-cta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: auto;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background-color: var(--accent-blue);
-      color: white;
-      border: none;
-      border-radius: var(--border-radius);
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: var(--transition);
-      text-decoration: none;
-    }
-
-    .btn:hover {
-      background-color: #4098fc;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 1px solid var(--border-color);
-      color: var(--text-secondary);
-    }
-
-    .btn-outline:hover {
-      background: var(--bg-secondary);
-      color: var(--text-primary);
-      border-color: var(--accent-blue);
-    }
-
-    .implementation-time {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-    }
-
-    .implementation-time:before {
-      content: '⏱️';
-      margin-right: 0.5rem;
-    }
-
-    .benefits-section {
-      margin-top: 4rem;
-    }
-
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .benefit-item {
-      text-align: center;
-      padding: 1.5rem;
-    }
-
-    .benefit-icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .benefit-item h3 {
-      margin-bottom: 0.5rem;
-      color: var(--text-primary);
-    }
-
-    .benefit-item p {
-      color: var(--text-secondary);
-    }
-
-    .cta-section {
-      text-align: center;
-      padding: 3rem 2rem;
-      background: var(--bg-card);
-      border-radius: var(--border-radius);
-      margin-top: 4rem;
-      border: 1px solid var(--border-color);
-    }
-
-    .cta-section h2 {
-      margin-bottom: 1rem;
-      color: var(--text-primary);
-    }
-
-    .cta-section p {
-      color: var(--text-secondary);
-      max-width: 600px;
-      margin: 0 auto 2rem;
-    }
-
-    .btn-large {
-      padding: 1rem 2rem;
-      font-size: 1.1rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: var(--bg-secondary);
-      color: var(--text-primary);
-      border-top: 1px solid var(--border-color);
-      margin-top: 4rem;
-    }
-
-    footer p {
-      margin-bottom: 1rem;
-    }
-
-    footer a {
-      color: var(--accent-blue);
-      text-decoration: none;
-      margin: 0 0.75rem;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Responsive styles */
-    @media (max-width: 768px) {
-      header {
-        padding: 1rem;
-      }
-
-      .mobile-menu-btn {
-        display: block;
-      }
-
-      nav {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--bg-secondary);
-        flex-direction: column;
-        padding: 1rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        border-top: 1px solid var(--border-color);
-      }
-
-      nav.show {
-        display: flex;
-      }
-
-      main {
-        padding: 1rem;
-      }
-
-      .page-header h1 {
-        font-size: 2rem;
-      }
-
-      .solutions-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .solution-cta {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-      }
-
-      .benefits-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* Animation for cards */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .solution-card {
-      animation: fadeInUp 0.5s ease forwards;
-    }
-
-    .solution-card:nth-child(1) { animation-delay: 0.1s; }
-    .solution-card:nth-child(2) { animation-delay: 0.2s; }
-    .solution-card:nth-child(3) { animation-delay: 0.3s; }
-    .solution-card:nth-child(4) { animation-delay: 0.4s; }
-    .solution-card:nth-child(5) { animation-delay: 0.5s; }
-
-    .animate-in {
-  opacity: 1 !important;
-  transform: none !important;
-}
-
-  </style>
+  <link rel="stylesheet" href="index.css" />
 </head>
+
 <body>
-   <div class="site">
+  <div class="site">
     <header>
-  <a href="index.html" class="brand">
-    <img src="assets/dynamics-live-logo.png" alt="Dynamics Live logo" class="logo">
-    <div class="brand-text">
-      <h1>Dynamics Live</h1>
-      <p>Innovation in Motion</p>
-    </div>
-  </a>
- <button class="mobile-menu-btn" id="mobile-menu-toggle">☰</button>
+      <a href="index.html" class="brand">
+        <div class="logo-mark">
+          <img src="assets/logo.png" alt="Dynamicare Logo" />
+        </div>
+        <div class="brand-text">
+          <h1>Dynamicare</h1>
+          <p>Innovation in Motion</p>
+        </div>
+      </a>
+
+      <button class="mobile-menu-btn" id="mobile-menu-toggle">☰</button>
       <nav id="main-nav">
         <a class="active" href="index.html">Home</a>
         <a href="services.html">Services</a>
-        <a href="solutions.html" >Solutions</a>
+        <a href="solutions.html">Solutions</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
-</header>
+    </header>
 
-
-    <!-- HOME -->
-    <main id="main-content" data-page="home" class="open">
+    <main>
       <section class="hero">
         <div class="hero-content animate-in">
-          <h2>Enterprise-grade support for Microsoft Dynamics 365</h2>
-          <p class="lead">Trusted by mid-market and enterprise customers to deliver fast incident resolution, robust implementations, secure integrations, and user adoption programs.</p>
-
+          <h1>Microsoft Dynamics 365 Services for Enterprises</h1>
+          <p class="lead">Empower your business with Dynamicare — your trusted partner for <strong>Microsoft Dynamics 365 implementation, support, and cloud transformation</strong>. Our certified experts deliver scalable ERP and CRM solutions that drive measurable growth.</p>
           <div class="cta">
-            <button class="btn primary" id="contact-cta" aria-label="Request a consultation">Request Consultation</button>
-            <button class="btn ghost" id="services-cta" aria-label="Explore our services">Explore Services</button>
+            <button class="btn primary">Request Consultation</button>
+            <button class="btn ghost">Explore Services</button>
           </div>
-
-          <div class="trust" role="list" aria-label="Trust indicators">
-            <div class="badge" role="listitem">ISO 27001-ready</div>
-            <div class="badge" role="listitem">Enterprise SLAs</div>
-            <div class="badge" role="listitem">Certified Consultants</div>
-            <div class="badge" role="listitem">Global Support</div>
+          <div class="trust">
+            <div class="badge">ISO 27001-ready</div>
+            <div class="badge">Enterprise SLAs</div>
+            <div class="badge">Certified Consultants</div>
+            <div class="badge">Global Support</div>
           </div>
         </div>
 
-        <aside class="card hero-decoration animate-in animate-delay-2" aria-labelledby="contact-form-title">
-          <h2 id="contact-form-title">Contact Our Team</h2>
-          <p style="margin-bottom: 20px">Our Enterprise Success Manager will reach out within one business day.</p>
-          <form id="lead-form" novalidate>
+        <!-- Lead Form -->
+        <aside class="card animate-in animate-delay-2">
+          <h2>Contact Our Dynamics 365 Experts</h2>
+          <p>Get tailored support and implementation strategies for your organization.</p>
+          <form id="lead-form">
             <div>
-              <label for="lead-company">Company Name <span aria-hidden="true">*</span></label>
-              <input id="lead-company" name="company" required placeholder="Your company" aria-required="true" />
+              <label for="lead-company">Company Name *</label>
+              <input id="lead-company" name="company" required placeholder="Your company" />
             </div>
             <div>
-              <label for="lead-name">Your Name <span aria-hidden="true">*</span></label>
-              <input id="lead-name" name="name" required placeholder="Full name" aria-required="true" />
+              <label for="lead-name">Your Name *</label>
+              <input id="lead-name" name="name" required placeholder="Full name" />
             </div>
             <div>
-              <label for="lead-email">Email Address <span aria-hidden="true">*</span></label>
-              <input id="lead-email" name="email" required type="email" placeholder="you@company.com" aria-required="true" />
+              <label for="lead-email">Email Address *</label>
+              <input id="lead-email" name="email" required type="email" placeholder="you@company.com" />
             </div>
             <div>
               <label for="lead-interest">Primary Interest</label>
@@ -561,12 +133,20 @@
               </select>
             </div>
             <button class="btn primary" type="submit">Request Consultation</button>
-            <div id="lead-result" role="status" aria-live="polite"></div>
           </form>
         </aside>
       </section>
 
-      <!-- Extended: Stats Section -->
+      <!-- Add a section for SEO-rich internal linking -->
+      <section class="seo-content animate-in">
+        <h2>End-to-End Microsoft Dynamics 365 Expertise</h2>
+        <p>Dynamicare delivers comprehensive services covering <a href="services.html">Dynamics 365 implementation</a>, <a href="solutions.html">ERP & CRM integration</a>, data migration, user training, and ongoing support. Our team has deep expertise across <strong>Business Central</strong>, <strong>Finance & Operations</strong>, <strong>Sales</strong>, and <strong>Customer Service</strong> modules.</p>
+        <p>With proven experience across manufacturing, finance, retail, and supply chain industries, Dynamicare helps enterprises <strong>maximize ROI</strong> from Dynamics 365 through automation, analytics, and AI-driven workflows.</p>
+      </section>
+
+      <!-- Rest of your sections stay as-is -->
+      <!-- stats, testimonials, why-section, services, etc. -->
+
       <section class="stats">
         <div class="stat animate-in">
           <div class="stat-number">500+</div>
@@ -586,12 +166,11 @@
         </div>
       </section>
 
-      <!-- Extended: Testimonials Section -->
-      <section class="testimonials" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
-        <h2 style="text-align: center; margin-bottom: 3rem;">What Our Clients Say</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+      <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-grid">
           <div class="card animate-in">
-            <p>"Revona's managed support transformed our Dynamics environment. Response times dropped by 70%, and our team feels empowered."</p>
+            <p>"Dynamicare's managed support transformed our Dynamics environment. Response times dropped by 70%, and our team feels empowered."</p>
             <p style="margin-top: 1rem; font-weight: 600; color: var(--accent-blue);">— Jane Doe, CFO, GlobalTech Inc.</p>
           </div>
           <div class="card animate-in animate-delay-1">
@@ -602,27 +181,25 @@
             <p>"Custom training programs boosted our user adoption to 95%. True partners in our digital transformation."</p>
             <p style="margin-top: 1rem; font-weight: 600; color: var(--accent-blue);">— Maria Garcia, Operations Lead, RetailMax.</p>
           </div>
-          <!-- New Testimonial -->
           <div class="card animate-in animate-delay-3">
-            <p>"Revona's accelerators for the 2025 wave 2 release helped us deploy AI agents seamlessly, enhancing our Copilot capabilities."</p>
+            <p>"Dynamicare's accelerators for the 2025 wave 2 release helped us deploy AI agents seamlessly, enhancing our Copilot capabilities."</p>
             <p style="margin-top: 1rem; font-weight: 600; color: var(--accent-blue);">— David Lee, VP IT, FinServe Global.</p>
           </div>
         </div>
       </section>
 
       <section class="why-section animate-in animate-delay-3">
-        <h2>Why Enterprise Customers Choose Revona</h2>
+        <h2>Why Enterprise Customers Choose Dynamicare</h2>
         <ul>
           <li><strong>Proactive SLAs</strong> — Dedicated SLAs, escalation paths and enterprise on-call rotations.</li>
           <li><strong>Deep Dynamics Expertise</strong> — Experienced consultants across Business Central, F&O, Sales & Service apps.</li>
           <li><strong>Secure Integrations</strong> — Best-practice middleware, API governance and identity management.</li>
           <li><strong>Train & Onboard</strong> — Scalable user training and role-based learning programs.</li>
-          <!-- Extended: Additional Why -->
           <li><strong>Wave Release Expertise</strong> — Specialized support for Dynamics 365 2025 release wave 2, including AI agents and Copilot enhancements.</li>
         </ul>
       </section>
 
-      <section class="services" aria-label="Our primary services">
+      <section class="services">
         <article class="service card animate-in">
           <h3>Managed Support</h3>
           <p>24/7 incident handling, SLA-backed resolution times, dedicated success manager and monthly reviews.</p>
@@ -654,65 +231,74 @@
           <h2>Featured Case Study</h2>
           <h3 style="margin-top: 16px">Global Distributor — Finance & Operations Migration</h3>
           <p style="color: var(--text-muted); font-size: 14px; margin: 8px 0">12-month engagement • 3 regions • Lift & shift + rework</p>
-          <p style="margin-top: 16px">Revona led a phased migration from legacy ERP to Dynamics 365 Finance and Operations, reducing month-end close time by 42% and improving supply chain visibility.</p>
-          <!-- Extended: More details -->
+          <p style="margin-top: 16px">Dynamicare led a phased migration from legacy ERP to Dynamics 365 Finance and Operations, reducing month-end close time by 42% and improving supply chain visibility.</p>
           <p style="margin-top: 1rem; color: var(--text-secondary);">Key outcomes: Automated reporting dashboards, integrated with Azure Synapse for real-time analytics, and custom workflows for multi-entity compliance. Post-migration, we implemented 2025 wave 1 updates for enhanced financial reporting.</p>
-          <button class="btn ghost" style="margin-top: 20px" id="view-more-case">Read Full Case Study</button>
+          <button class="btn ghost" style="margin-top: 20px">Read Full Case Study</button>
         </article>
 
         <aside class="card">
           <h3>Security & Compliance</h3>
           <p>We follow enterprise security practices: role-based access, Azure AD integration, encryption in transit and at rest, and support for SOC/ISO controls.</p>
-          <!-- Extended: Additional compliance info -->
           <p style="margin-top: 1rem; color: var(--text-secondary);">GDPR-ready data handling, regular penetration testing, and compliance audits included in all managed services. Aligned with 2025 release wave 2 for improved data governance features.</p>
         </aside>
       </section>
-
-      <!-- Extended: Blog Preview Section with Updated Content -->
-      <section style="background: var(--bg-secondary); border-top: 1px solid var(--border-color);">
-        <h2 style="text-align: center; margin-bottom: 3rem;">Latest Insights</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-          <div class="card animate-in">
-            <h3>Dynamics 365 2025 Release Wave 2: Key Features for Enterprises</h3>
-            <p style="color: var(--text-muted); margin: 8px 0 1rem 0;">October 2025</p>
-            <p>Discover the latest in AI-driven agents, enhanced Copilot for financial reporting, and improved supply chain modules in the 2025 release wave 2, rolling out from October 2025 through March 2026.<grok-card data-id="46b1fd" data-type="citation_card"></grok-card><grok-card data-id="72b05a" data-type="citation_card"></grok-card></p>
-            <button class="btn ghost" style="margin-top: 1rem;">Read More</button>
-          </div>
-          <div class="card animate-in animate-delay-1">
-            <h3>Power Platform Wave 2: Integrating AI Agents with Dynamics</h3>
-            <p style="color: var(--text-muted); margin: 8px 0 1rem 0;">October 2025</p>
-            <p>Explore smarter AI agents and Copilot enhancements in Power Platform 2025 release wave 2, perfect for seamless Dynamics integrations.<grok-card data-id="02b1df" data-type="citation_card"></grok-card><grok-card data-id="a0bb76" data-type="citation_card"></grok-card></p>
-            <button class="btn ghost" style="margin-top: 1rem;">Read More</button>
-          </div>
-          <div class="card animate-in animate-delay-2">
-            <h3>Business Central October 2025 Cumulative Updates</h3>
-            <p style="color: var(--text-muted); margin: 8px 0 1rem 0;">October 2025</p>
-            <p>Highlights from the October 2025 updates for Dynamics 365 Business Central, including enhanced financial reporting and AI capabilities.<grok-card data-id="54ebb1" data-type="citation_card"></grok-card><grok-card data-id="97d70a" data-type="citation_card"></grok-card></p>
-            <button class="btn ghost" style="margin-top: 1rem;">Read More</button>
-          </div>
-          <!-- New Blog Post -->
-          <div class="card animate-in animate-delay-3">
-            <h3>Dynamics GP October 2025 Release: Customer-Driven Enhancements</h3>
-            <p style="color: var(--text-muted); margin: 8px 0 1rem 0;">October 2025</p>
-            <p>Small but impactful updates from customer suggestions in the Dynamics GP October 2025 release, focusing on usability and efficiency.<grok-card data-id="9fe74b" data-type="citation_card"></grok-card></p>
-            <button class="btn ghost" style="margin-top: 1rem;">Read More</button>
-          </div>
-        </div>
-      </section>
-
-    
     </main>
 
-
-    <footer role="contentinfo">
-      <p>© <span id="year"></span> Revona Dynamics Support. All rights reserved.</p>
+    <footer>
+      <p>© <span id="year">2025</span> Dynamicare. All rights reserved.</p>
       <p style="margin-top: 8px; font-size: 14px">
-        <a href="#/contact" style="color: var(--text-muted); text-decoration: none; margin: 0 12px">Contact</a>
-        <a href="#/privacy" style="color: var(--text-muted); text-decoration: none; margin: 0 12px">Privacy Policy</a>
-        <a href="#/terms" style="color: var(--text-muted); text-decoration: none; margin: 0 12px">Terms of Service</a>
+        <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+<a href="toc.html">Terms & Conditions</a>
+
       </p>
     </footer>
   </div>
 
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.getElementById('main-nav');
+      nav.classList.toggle('show');
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('#main-nav a').forEach(link => {
+      link.addEventListener('click', function() {
+        document.getElementById('main-nav').classList.remove('show');
+      });
+    });
+
+    // Form submission
+    document.getElementById('lead-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you! Our team will contact you within one business day.');
+      this.reset();
+    });
+
+    // Update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+    <script>// Handle clean URLs
+if (window.location.pathname.endsWith('.html')) {
+    const cleanUrl = window.location.pathname.replace('.html', '');
+    window.history.replaceState(null, null, cleanUrl);
+}
+
+// Update active navigation
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('nav a');
+    
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        if (currentPath.includes(linkPath.replace('.html', '')) || 
+            (currentPath === '/' && linkPath === 'index.html')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+});</script>
 </body>
 </html>
